@@ -20,8 +20,9 @@ jobs:
       - name: Build with Gradle
         run: ./gradlew build
 
-      - name: Upload a Build Artifact
-        uses: actions/upload-artifact@v3.2.1-node20
+      - name: Release APK Publisher
+        uses: nightcrawler-/action-release-apk@1.0.2
         with:
-          name: MemoryGame.apk
-          path: app/release/app-release.apk
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          APP_FOLDER: app/release/
+          RELEASE_TITLE: New Build
