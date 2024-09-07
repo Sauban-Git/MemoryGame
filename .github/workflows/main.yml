@@ -26,8 +26,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.API_KEY }}
         with:
-          tag_name: ${{ github.sha }}
-          release_name: Release ${{ github.sha }}
+          tag_name: release-${{ github.run_number }}
+          release_name: Release ${{ github.run_number }}
           draft: flase
           prerelease: false
 
