@@ -20,9 +20,23 @@ jobs:
       - name: Build with Gradle
         run: ./gradlew build
 
-      - name: Release APK Publisher
-        uses: nightcrawler-/action-release-apk@1.0.2
-        with:
+      - name: Create Release
+        id: create_release
+        uses: actions/create_release@v1
+        env:
           GITHUB_TOKEN: ${{ secrets.API_KEY }}
-          APP_FOLDER: app
-          RELEASE_TITLE: New Build
+        with:
+          tag_name: ${{ github.sha }}
+          release_name: Release ${{ github.sha }}
+          draft: flase
+          prerelease: false
+
+      - name: Upload APK to release
+        uses: actions/upload-release-assest@v1
+        env: 
+          GITHUB_TOKEN: ${{ secrets.API_KEY }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }]
+          asset_path: app/release/app-release.apk
+          asset_name: app-release.apk
+          asset_content_type: application/vnd.android.package-archive
