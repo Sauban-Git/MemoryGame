@@ -24,5 +24,5 @@ jobs:
         uses: nightcrawler-/action-release-apk@1.0.2
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          APP_FOLDER: app/release/
+          APP_FOLDER: app
           RELEASE_TITLE: New Build
