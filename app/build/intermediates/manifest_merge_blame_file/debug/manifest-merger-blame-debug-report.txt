@@ -1,0 +1,94 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.sauban.mymemory"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="24"
+9        android:targetSdkVersion="33" />
+10
+11    <permission
+11-->[androidx.core:core:1.9.0] /home/sauban/.gradle/caches/transforms-3/b5ba732faec324c1f421e5180141a7a3/transformed/core-1.9.0/AndroidManifest.xml:22:5-24:47
+12        android:name="com.sauban.mymemory.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+12-->[androidx.core:core:1.9.0] /home/sauban/.gradle/caches/transforms-3/b5ba732faec324c1f421e5180141a7a3/transformed/core-1.9.0/AndroidManifest.xml:23:9-81
+13        android:protectionLevel="signature" />
+13-->[androidx.core:core:1.9.0] /home/sauban/.gradle/caches/transforms-3/b5ba732faec324c1f421e5180141a7a3/transformed/core-1.9.0/AndroidManifest.xml:24:9-44
+14
+15    <uses-permission android:name="com.sauban.mymemory.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+15-->[androidx.core:core:1.9.0] /home/sauban/.gradle/caches/transforms-3/b5ba732faec324c1f421e5180141a7a3/transformed/core-1.9.0/AndroidManifest.xml:26:5-97
+15-->[androidx.core:core:1.9.0] /home/sauban/.gradle/caches/transforms-3/b5ba732faec324c1f421e5180141a7a3/transformed/core-1.9.0/AndroidManifest.xml:26:22-94
+16
+17    <application
+17-->/home/sauban/AndroidStudioProjects/MyMemory/app/src/main/AndroidManifest.xml:5:5-28:19
+18        android:allowBackup="true"
+18-->/home/sauban/AndroidStudioProjects/MyMemory/app/src/main/AndroidManifest.xml:6:9-35
+19        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+19-->[androidx.core:core:1.9.0] /home/sauban/.gradle/caches/transforms-3/b5ba732faec324c1f421e5180141a7a3/transformed/core-1.9.0/AndroidManifest.xml:28:18-86
+20        android:dataExtractionRules="@xml/data_extraction_rules"
+20-->/home/sauban/AndroidStudioProjects/MyMemory/app/src/main/AndroidManifest.xml:7:9-65
+21        android:debuggable="true"
+22        android:extractNativeLibs="false"
+23        android:fullBackupContent="@xml/backup_rules"
+23-->/home/sauban/AndroidStudioProjects/MyMemory/app/src/main/AndroidManifest.xml:8:9-54
+24        android:icon="@mipmap/ic_launcher"
+24-->/home/sauban/AndroidStudioProjects/MyMemory/app/src/main/AndroidManifest.xml:9:9-43
+25        android:label="@string/app_name"
+25-->/home/sauban/AndroidStudioProjects/MyMemory/app/src/main/AndroidManifest.xml:10:9-41
+26        android:roundIcon="@mipmap/ic_launcher_round"
+26-->/home/sauban/AndroidStudioProjects/MyMemory/app/src/main/AndroidManifest.xml:11:9-54
+27        android:supportsRtl="true"
+27-->/home/sauban/AndroidStudioProjects/MyMemory/app/src/main/AndroidManifest.xml:12:9-35
+28        android:testOnly="true"
+29        android:theme="@style/AppTheme" >
+29-->/home/sauban/AndroidStudioProjects/MyMemory/app/src/main/AndroidManifest.xml:13:9-40
+30        <activity
+30-->/home/sauban/AndroidStudioProjects/MyMemory/app/src/main/AndroidManifest.xml:15:9-17:40
+31            android:name="com.sauban.mymemory.CreateActivity"
+31-->/home/sauban/AndroidStudioProjects/MyMemory/app/src/main/AndroidManifest.xml:16:13-43
+32            android:exported="false" />
+32-->/home/sauban/AndroidStudioProjects/MyMemory/app/src/main/AndroidManifest.xml:17:13-37
+33        <activity
+33-->/home/sauban/AndroidStudioProjects/MyMemory/app/src/main/AndroidManifest.xml:18:9-27:20
+34            android:name="com.sauban.mymemory.MainActivity"
+34-->/home/sauban/AndroidStudioProjects/MyMemory/app/src/main/AndroidManifest.xml:19:13-41
+35            android:configChanges="uiMode|screenSize|orientation"
+35-->/home/sauban/AndroidStudioProjects/MyMemory/app/src/main/AndroidManifest.xml:20:13-66
+36            android:exported="true" >
+36-->/home/sauban/AndroidStudioProjects/MyMemory/app/src/main/AndroidManifest.xml:21:13-36
+37            <intent-filter>
+37-->/home/sauban/AndroidStudioProjects/MyMemory/app/src/main/AndroidManifest.xml:22:13-26:29
+38                <action android:name="android.intent.action.MAIN" />
+38-->/home/sauban/AndroidStudioProjects/MyMemory/app/src/main/AndroidManifest.xml:23:17-69
+38-->/home/sauban/AndroidStudioProjects/MyMemory/app/src/main/AndroidManifest.xml:23:25-66
+39
+40                <category android:name="android.intent.category.LAUNCHER" />
+40-->/home/sauban/AndroidStudioProjects/MyMemory/app/src/main/AndroidManifest.xml:25:17-77
+40-->/home/sauban/AndroidStudioProjects/MyMemory/app/src/main/AndroidManifest.xml:25:27-74
+41            </intent-filter>
+42        </activity>
+43
+44        <provider
+44-->[androidx.emoji2:emoji2:1.2.0] /home/sauban/.gradle/caches/transforms-3/dc3a2527719af6ee81f6de9e4f2793d9/transformed/emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
+45            android:name="androidx.startup.InitializationProvider"
+45-->[androidx.emoji2:emoji2:1.2.0] /home/sauban/.gradle/caches/transforms-3/dc3a2527719af6ee81f6de9e4f2793d9/transformed/emoji2-1.2.0/AndroidManifest.xml:25:13-67
+46            android:authorities="com.sauban.mymemory.androidx-startup"
+46-->[androidx.emoji2:emoji2:1.2.0] /home/sauban/.gradle/caches/transforms-3/dc3a2527719af6ee81f6de9e4f2793d9/transformed/emoji2-1.2.0/AndroidManifest.xml:26:13-68
+47            android:exported="false" >
+47-->[androidx.emoji2:emoji2:1.2.0] /home/sauban/.gradle/caches/transforms-3/dc3a2527719af6ee81f6de9e4f2793d9/transformed/emoji2-1.2.0/AndroidManifest.xml:27:13-37
+48            <meta-data
+48-->[androidx.emoji2:emoji2:1.2.0] /home/sauban/.gradle/caches/transforms-3/dc3a2527719af6ee81f6de9e4f2793d9/transformed/emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
+49                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+49-->[androidx.emoji2:emoji2:1.2.0] /home/sauban/.gradle/caches/transforms-3/dc3a2527719af6ee81f6de9e4f2793d9/transformed/emoji2-1.2.0/AndroidManifest.xml:30:17-75
+50                android:value="androidx.startup" />
+50-->[androidx.emoji2:emoji2:1.2.0] /home/sauban/.gradle/caches/transforms-3/dc3a2527719af6ee81f6de9e4f2793d9/transformed/emoji2-1.2.0/AndroidManifest.xml:31:17-49
+51            <meta-data
+51-->[androidx.lifecycle:lifecycle-process:2.4.1] /home/sauban/.gradle/caches/transforms-3/624071abb68c3ac7394235b9969fced5/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:31:13-33:52
+52                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+52-->[androidx.lifecycle:lifecycle-process:2.4.1] /home/sauban/.gradle/caches/transforms-3/624071abb68c3ac7394235b9969fced5/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:32:17-78
+53                android:value="androidx.startup" />
+53-->[androidx.lifecycle:lifecycle-process:2.4.1] /home/sauban/.gradle/caches/transforms-3/624071abb68c3ac7394235b9969fced5/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:33:17-49
+54        </provider>
+55    </application>
+56
+57</manifest>

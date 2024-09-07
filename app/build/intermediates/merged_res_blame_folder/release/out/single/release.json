@@ -1,0 +1,250 @@
+[
+    {
+        "merged": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-merged_res-29:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-main-30:/mipmap-xxxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-merged_res-29:/drawable_ic_custom.xml.flat",
+        "source": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-main-30:/drawable/ic_custom.xml"
+    },
+    {
+        "merged": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-merged_res-29:/drawable_ic_menu.xml.flat",
+        "source": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-main-30:/drawable/ic_menu.xml"
+    },
+    {
+        "merged": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-merged_res-29:/drawable_rounded_radio_group.xml.flat",
+        "source": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-main-30:/drawable/rounded_radio_group.xml"
+    },
+    {
+        "merged": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-merged_res-29:/mipmap-mdpi_ic_launcher_monochrome.png.flat",
+        "source": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-main-30:/mipmap-mdpi/ic_launcher_monochrome.png"
+    },
+    {
+        "merged": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-merged_res-29:/xml_backup_rules.xml.flat",
+        "source": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-main-30:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-merged_res-29:/drawable_ic_face.xml.flat",
+        "source": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-main-30:/drawable/ic_face.xml"
+    },
+    {
+        "merged": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-merged_res-29:/layout_memory_card.xml.flat",
+        "source": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-main-30:/layout/memory_card.xml"
+    },
+    {
+        "merged": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-merged_res-29:/drawable_ic_phone.xml.flat",
+        "source": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-main-30:/drawable/ic_phone.xml"
+    },
+    {
+        "merged": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-merged_res-29:/layout_dialog_board_size.xml.flat",
+        "source": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-main-30:/layout/dialog_board_size.xml"
+    },
+    {
+        "merged": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-merged_res-29:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-main-30:/mipmap-mdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.sauban.mymemory.app-merged_res-29:/layout_dialog_board_size.xml.flat",
+        "source": "com.sauban.mymemory.app-main-30:/layout/dialog_board_size.xml"
+    },
+    {
+        "merged": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-merged_res-29:/drawable_ic_rocket.xml.flat",
+        "source": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-main-30:/drawable/ic_rocket.xml"
+    },
+    {
+        "merged": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-merged_res-29:/mipmap-hdpi_ic_launcher_foreground.webp.flat",
+        "source": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-main-30:/mipmap-hdpi/ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-merged_res-29:/drawable_ic_speaker.xml.flat",
+        "source": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-main-30:/drawable/ic_speaker.xml"
+    },
+    {
+        "merged": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-merged_res-29:/drawable_fab_text_bg.xml.flat",
+        "source": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-main-30:/drawable/fab_text_bg.xml"
+    },
+    {
+        "merged": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-merged_res-29:/drawable_background_gradient_dark.xml.flat",
+        "source": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-main-30:/drawable/background_gradient_dark.xml"
+    },
+    {
+        "merged": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-merged_res-29:/drawable_ic_thumbsup.xml.flat",
+        "source": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-main-30:/drawable/ic_thumbsup.xml"
+    },
+    {
+        "merged": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-merged_res-29:/drawable_ic_plane.xml.flat",
+        "source": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-main-30:/drawable/ic_plane.xml"
+    },
+    {
+        "merged": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-merged_res-29:/drawable_pattern.png.flat",
+        "source": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-main-30:/drawable/pattern.png"
+    },
+    {
+        "merged": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-merged_res-29:/drawable_ic_watch.xml.flat",
+        "source": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-main-30:/drawable/ic_watch.xml"
+    },
+    {
+        "merged": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-merged_res-29:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-main-30:/mipmap-xhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-merged_res-29:/drawable_ic_flower.xml.flat",
+        "source": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-main-30:/drawable/ic_flower.xml"
+    },
+    {
+        "merged": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-merged_res-29:/drawable_background_gradient_light.xml.flat",
+        "source": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-main-30:/drawable/background_gradient_light.xml"
+    },
+    {
+        "merged": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-merged_res-29:/anim_rotate_clock_wise.xml.flat",
+        "source": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-main-30:/anim/rotate_clock_wise.xml"
+    },
+    {
+        "merged": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-merged_res-29:/layout_activity_main.xml.flat",
+        "source": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-main-30:/layout/activity_main.xml"
+    },
+    {
+        "merged": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-merged_res-29:/drawable_ic_bike.xml.flat",
+        "source": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-main-30:/drawable/ic_bike.xml"
+    },
+    {
+        "merged": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-merged_res-29:/mipmap-xhdpi_ic_launcher_monochrome.png.flat",
+        "source": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-main-30:/mipmap-xhdpi/ic_launcher_monochrome.png"
+    },
+    {
+        "merged": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-merged_res-29:/drawable_ic_edit.xml.flat",
+        "source": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-main-30:/drawable/ic_edit.xml"
+    },
+    {
+        "merged": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-merged_res-29:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-main-30:/mipmap-xxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-merged_res-29:/mipmap-hdpi_ic_launcher_monochrome.png.flat",
+        "source": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-main-30:/mipmap-hdpi/ic_launcher_monochrome.png"
+    },
+    {
+        "merged": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-merged_res-29:/drawable_ic_taxi.xml.flat",
+        "source": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-main-30:/drawable/ic_taxi.xml"
+    },
+    {
+        "merged": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-merged_res-29:/drawable_ic_launcher_background.xml.flat",
+        "source": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-main-30:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-merged_res-29:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-main-30:/mipmap-hdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-merged_res-29:/animator_fab_elevation_animator.xml.flat",
+        "source": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-main-30:/animator/fab_elevation_animator.xml"
+    },
+    {
+        "merged": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-merged_res-29:/mipmap-xxxhdpi_ic_launcher_foreground.webp.flat",
+        "source": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-main-30:/mipmap-xxxhdpi/ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-merged_res-29:/mipmap-hdpi_ic_launcher_background.png.flat",
+        "source": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-main-30:/mipmap-hdpi/ic_launcher_background.png"
+    },
+    {
+        "merged": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-merged_res-29:/drawable_ic_food.xml.flat",
+        "source": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-main-30:/drawable/ic_food.xml"
+    },
+    {
+        "merged": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-merged_res-29:/drawable_ic_package.xml.flat",
+        "source": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-main-30:/drawable/ic_package.xml"
+    },
+    {
+        "merged": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-merged_res-29:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-main-30:/mipmap-xhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-merged_res-29:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-main-30:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-merged_res-29:/drawable_ic_temple.xml.flat",
+        "source": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-main-30:/drawable/ic_temple.xml"
+    },
+    {
+        "merged": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-merged_res-29:/drawable_ic_refresh.xml.flat",
+        "source": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-main-30:/drawable/ic_refresh.xml"
+    },
+    {
+        "merged": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-merged_res-29:/mipmap-xhdpi_ic_launcher_background.png.flat",
+        "source": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-main-30:/mipmap-xhdpi/ic_launcher_background.png"
+    },
+    {
+        "merged": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-merged_res-29:/mipmap-mdpi_ic_launcher_foreground.webp.flat",
+        "source": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-main-30:/mipmap-mdpi/ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-merged_res-29:/drawable_ic_sun.xml.flat",
+        "source": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-main-30:/drawable/ic_sun.xml"
+    },
+    {
+        "merged": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-merged_res-29:/anim_from_top_anim.xml.flat",
+        "source": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-main-30:/anim/from_top_anim.xml"
+    },
+    {
+        "merged": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-merged_res-29:/drawable_ic_skate.xml.flat",
+        "source": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-main-30:/drawable/ic_skate.xml"
+    },
+    {
+        "merged": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-merged_res-29:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-main-30:/mipmap-hdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-merged_res-29:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-main-30:/mipmap-mdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-merged_res-29:/mipmap-mdpi_ic_launcher_background.png.flat",
+        "source": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-main-30:/mipmap-mdpi/ic_launcher_background.png"
+    },
+    {
+        "merged": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-merged_res-29:/xml_data_extraction_rules.xml.flat",
+        "source": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-main-30:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-merged_res-29:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-main-30:/drawable/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-merged_res-29:/mipmap-xxhdpi_ic_launcher_foreground.webp.flat",
+        "source": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-main-30:/mipmap-xxhdpi/ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-merged_res-29:/mipmap-xhdpi_ic_launcher_foreground.webp.flat",
+        "source": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-main-30:/mipmap-xhdpi/ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-merged_res-29:/drawable_ic_back.xml.flat",
+        "source": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-main-30:/drawable/ic_back.xml"
+    },
+    {
+        "merged": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-merged_res-29:/anim_rotate_anti_clock_wise.xml.flat",
+        "source": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-main-30:/anim/rotate_anti_clock_wise.xml"
+    },
+    {
+        "merged": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-merged_res-29:/drawable_ic_nosmoke.xml.flat",
+        "source": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-main-30:/drawable/ic_nosmoke.xml"
+    },
+    {
+        "merged": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-merged_res-29:/anim_to_top_anim.xml.flat",
+        "source": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-main-30:/anim/to_top_anim.xml"
+    },
+    {
+        "merged": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-merged_res-29:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-main-30:/mipmap-xxxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-merged_res-29:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-main-30:/mipmap-xxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-merged_res-29:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-main-30:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    }
+]

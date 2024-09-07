@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="back_dark">@android:color/background_dark</color>
+    <color name="black">#FF000000</color>
+    <color name="card_color">#B39DDB</color>
+    <color name="color_gray">#E0E0E0</color>
+    <color name="color_progress_full">#35BA01</color>
+    <color name="color_progress_none">@android:color/holo_red_dark</color>
+    <color name="light_purple">#B39DDB</color>
+    <color name="purple">#9C27B0</color>
+    <color name="purple_dark">#7B1FA2</color>
+    <color name="white">#FFFFFFFF</color>
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+    
+    
+    <item name="android:windowBackground">@color/black</item>
+    
+    <item name="colorPrimary">@color/purple</item>
+    <item name="colorPrimaryDark">@color/purple_dark</item>
+    <item name="colorAccent">@color/purple</item>
+
+
+    
+    <item name="android:statusBarColor">@android:color/transparent</item>
+    <item name="android:navigationBarColor">@android:color/transparent</item>
+
+
+</style>
+</resources>

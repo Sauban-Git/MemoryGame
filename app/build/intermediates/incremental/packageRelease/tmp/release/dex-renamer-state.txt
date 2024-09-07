@@ -1,0 +1,4 @@
+#Sat Sep 07 22:53:23 IST 2024
+base.0=/home/sauban/AndroidStudioProjects/MyMemory2/app/build/intermediates/dex/release/minifyReleaseWithR8/classes.dex
+path.0=classes.dex
+renamed.0=classes.dex
