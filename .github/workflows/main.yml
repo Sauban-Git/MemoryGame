@@ -9,7 +9,7 @@ jobs:
         uses: actions/checkout@v4.1.7
       
       - name: Setup Java JDK
-        uses: actions/setup-java@v4.2.2
+        uses: actions/setup-java@v4.3.0
         with:
           java-version: '17'
           distribution: 'adopt'
@@ -17,23 +17,30 @@ jobs:
       - name: Build with Gradle
         run: ./gradlew build
 
-      - name: Create Release
-        id: create_release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.API_KEY }}
+      - name: Upload a Build Artifact
+        uses: actions/upload-artifact@v4.4.0
         with:
-          tag_name: release-${{ github.run_number }}
-          release_name: Release ${{ github.run_number }}
-          draft: flase
-          prerelease: false
+          name: release-apk
+          path: app/release/app-release.apk
+            
 
-      - name: Upload APK to release
-        uses: actions/upload-release-asset@v1
-        env: 
-          GITHUB_TOKEN: ${{ secrets.API_KEY }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: app/release/app-release.apk
-          asset_name: app-release.apk
-          asset_content_type: application/vnd.android.package-archive
+      # - name: Create Release
+      #   id: create_release
+      #   uses: actions/create-release@v1
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.API_KEY }}
+      #   with:
+      #     tag_name: release-${{ github.run_number }}
+      #     release_name: Release ${{ github.run_number }}
+      #     draft: flase
+      #     prerelease: false
+
+      # - name: Upload APK to release
+      #   uses: actions/upload-release-asset@v1
+      #   env: 
+      #     GITHUB_TOKEN: ${{ secrets.API_KEY }}
+      #   with:
+      #     upload_url: ${{ steps.create_release.outputs.upload_url }}
+      #     asset_path: app/release/app-release.apk
+      #     asset_name: app-release.apk
+      #     asset_content_type: application/vnd.android.package-archive
