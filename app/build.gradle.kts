@@ -23,7 +23,7 @@ android {
 
     signingConfigs {
         release {
-            storeFile file("mykeys.keystore")
+            storeFile file("$rootDir/mykeys.keystore")
             storePassword System.getenv("PASS_KEYSTORE")?: "defaultKeystorePassword"
             keyAlias System.getenv("ALIAS")?: "defaultAlias"
             keyPassword System.getenv("ALIASKEY")?: "defaultAliasPassword"
