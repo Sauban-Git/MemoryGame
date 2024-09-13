@@ -38,8 +38,8 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.API_KEY }}
         with:
-          tag_name: release-v1.1
-          release_name: MemoryGame v1.1
+          tag_name: release-${{ github.run_number }}
+          release_name: MemoryGame ${{ github.run_number }}
           draft: false
           prerelease: false
 
