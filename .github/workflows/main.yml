@@ -11,11 +11,15 @@ jobs:
       - name: Setup Java JDK
         uses: actions/setup-java@v4.3.0
         with:
-          java-version: '17'
-          distribution: 'adopt'
+          java-version: '18'
+          distribution: 'temurin'
+          cache: gradle
+
+      - name: Grant execute permission for gradlew
+        run: chmod +x gradlew
         
       - name: Build with Gradle
-        run: ./gradlew build
+        run: ./gradlew assembleRelease
 
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v4.4.0
