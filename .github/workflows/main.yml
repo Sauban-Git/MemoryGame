@@ -17,6 +17,17 @@ jobs:
 
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
+
+      - name: Write sign info
+        if: github.repository == 'Sauban-Git/MemoryGame'
+        run: |
+          if [ ! -z "${{ secrets.MYKEYS }}" ]; then
+            echo storePassword='${{ secrets.PASS_KEYSTORE }}' >> keystore.properties
+            echo keyAlias='${{ secrets.ALIAS }}' >> keystore.properties
+            echo keyPassword='${{ secrets.ALIASKEY }}' >> keystore.properties
+            echo storeFile='${{ github.workspace }}/key.jks' >> keystore.properties
+            echo ${{ secrets.MYKEYS }} | base64 --decode > ${{ github.workspace }}/key.jks
+          fi
         
       - name: Build with Gradle
         run: ./gradlew assembleRelease
