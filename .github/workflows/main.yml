@@ -28,26 +28,11 @@ jobs:
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
 
-      - name: Get application version name
-        run: echo "VERSION_NAME=$(${{github.workspace}}/gradlew -q printVersionName)" >> $GITHUB_ENV
-
-      - name: Bump application version code
-        uses: chkfung/android-version-actions@v1.2.3
-        with:
-          gradlePath: app/build.gradle.kts
-          versionCode: ${{github.run_number}}
-          versionName: "${{ env.VERSION_NAME }} Dev (#${{github.run_number}})"
-
-      - name: Write sign info
-        if: github.repository == 'Sauban-Git/MemoryGame'
+      - name: Decrypt keystore
         run: |
-          if [ ! -z "${{ secrets.MYKEYS }}" ]; then
-            echo storePassword='${{ secrets.PASS_KEYSTORE }}' >> keystore.properties
-            echo keyAlias='${{ secrets.ALIAS }}' >> keystore.properties
-            echo keyPassword='${{ secrets.ALIASKEY }}' >> keystore.properties
-            echo storeFile='${{ github.workspace }}/key.jks' >> keystore.properties
-            echo ${{ secrets.MYKEYS }} | base64 --decode > ${{ github.workspace }}/key.jks
-          fi
+          echo "${{ secrets.MYAPP_RELEASE_STOREFILE }}" > my-release-key.jks
+        env:
+          MYAPP_RELEASE_STOREFILE: ${{ secrets.MYAPP_RELEASE_STOREFILE }}
           
       - name: Build with Gradle
         run: ./gradlew assembleRelease
