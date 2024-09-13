@@ -1,13 +1,13 @@
 <lint-module
     format="1"
-    dir="/home/sauban/AndroidStudioProjects/MyMemory2/app"
+    dir="/home/sauban/Documents/GitHub/MemoryGame/app"
     name=":app"
     type="APP"
     maven="My Memory:app:"
     agpVersion="8.1.3"
     buildFolder="build"
-    bootClassPath="/home/sauban/Android/Sdk/platforms/android-33/android.jar:/home/sauban/Android/Sdk/build-tools/33.0.1/core-lambda-stubs.jar"
-    javaSourceLevel="1.8"
+    bootClassPath="/root/Android/Sdk/platforms/android-33/android.jar:/root/Android/Sdk/build-tools/33.0.1/core-lambda-stubs.jar"
+    javaSourceLevel="17"
     compileTarget="android-33">
   <lintOptions
       abortOnError="true"

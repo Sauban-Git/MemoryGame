@@ -76,16 +76,19 @@
         android:layout_height="0dp"
         android:layout_marginTop="8dp"
         android:clickable="true"
+        android:contentDescription="Nothing"
+        android:elevation="8dp"
+        android:focusable="true"
         android:src="@drawable/ic_menu"
+        android:stateListAnimator="@animator/fab_elevation_animator"
+        android:translationZ="12dp"
         app:backgroundTint="@color/purple"
         app:fabCustomSize="47dp"
-        android:elevation="8dp"
-        android:translationZ="12dp"
-        android:stateListAnimator="@animator/fab_elevation_animator"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.954"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
