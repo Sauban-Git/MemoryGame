@@ -11,7 +11,7 @@ jobs:
       - name: Setup Java JDK
         uses: actions/setup-java@v4.2.2
         with:
-          java-version: '18'
+          java-version: '11'
           distribution: 'adopt'
 
       - name: permission
@@ -23,6 +23,11 @@ jobs:
         
       - name: Build with Gradle
         run: ./gradlew assembleRelease
+        env:
+          ANDROID_KEYSTORE: android_keystore.jks
+          ANDROID_KEYSTORE_PASSWORD: ${{ secrets.MYAPP_RELEASE_STORE_PASSWORD }}
+          ANDROID_KEY_ALIAS: ${{ secrets.MYAPP_RELEASE_KEY_ALIAS }}
+          ANDROID_KEY_PASSWORD: ${{ secrets.MYAPP_RELEASE_KEY_PASSWORD }}
 
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v4
