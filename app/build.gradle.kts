@@ -26,7 +26,7 @@ android {
             storeFile file("mykeys.keystore")
             storePassword System.getenv("PASS_KEYSTORE")?: "defaultKeystorePassword"
             keyAlias System.getenv("ALIAS")?: "defaultAlias"
-            keyPassword System.getenv("ALIASKEY")?: defaultAliasPassword
+            keyPassword System.getenv("ALIASKEY")?: "defaultAliasPassword"
         }
     }
 
