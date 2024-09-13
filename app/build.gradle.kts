@@ -22,7 +22,7 @@ android {
     }
 
     val keystorePropertiesFile = rootProject.file("keystore.properties")
-    var releaseSigning = signingConfigs.getByName("debug")
+    var releaseSigning = signingConfigs.getByName("release")
 
     try {
         val keystoreProperties = Properties()
@@ -41,7 +41,6 @@ android {
 
     buildTypes {
         release {
-            signingConfig signingConfigs.release
             isMinifyEnabled = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
