@@ -16,7 +16,7 @@ android {
         minSdk = 24
         targetSdk = 34
         versionCode = 1
-        versionName = "1.0"
+        versionName = "1.1"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -24,9 +24,9 @@ android {
     signingConfigs {
         release {
             storeFile file("mykeys.keystore")
-            storePassword System.getenv("PASS_KEYSTORE")
-            keyAlias System.getenv("ALIAS")
-            keyPassword System.getenv("ALIASKEY")
+            storePassword System.getenv("PASS_KEYSTORE")?: "defaultKeystorePassword"
+            keyAlias System.getenv("ALIAS")?: "defaultAlias"
+            keyPassword System.getenv("ALIASKEY")?: defaultAliasPassword
         }
     }
 
