@@ -1,0 +1,242 @@
+[
+    {
+        "merged": "com.sauban.mymemory.app-release-4:/mipmap-xxxhdpi_ic_launcher_foreground.webp.flat",
+        "source": "com.sauban.mymemory.app-main-5:/mipmap-xxxhdpi/ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "com.sauban.mymemory.app-release-4:/drawable_pattern.png.flat",
+        "source": "com.sauban.mymemory.app-main-5:/drawable/pattern.png"
+    },
+    {
+        "merged": "com.sauban.mymemory.app-release-4:/drawable_ic_sun.xml.flat",
+        "source": "com.sauban.mymemory.app-main-5:/drawable/ic_sun.xml"
+    },
+    {
+        "merged": "com.sauban.mymemory.app-release-4:/xml_data_extraction_rules.xml.flat",
+        "source": "com.sauban.mymemory.app-main-5:/xml/data_extraction_rules.xml"
+    },
+    {
+        "merged": "com.sauban.mymemory.app-release-4:/drawable_ic_nosmoke.xml.flat",
+        "source": "com.sauban.mymemory.app-main-5:/drawable/ic_nosmoke.xml"
+    },
+    {
+        "merged": "com.sauban.mymemory.app-release-4:/drawable_ic_package.xml.flat",
+        "source": "com.sauban.mymemory.app-main-5:/drawable/ic_package.xml"
+    },
+    {
+        "merged": "com.sauban.mymemory.app-release-4:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "com.sauban.mymemory.app-main-5:/mipmap-xxxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.sauban.mymemory.app-release-4:/drawable_ic_thumbsup.xml.flat",
+        "source": "com.sauban.mymemory.app-main-5:/drawable/ic_thumbsup.xml"
+    },
+    {
+        "merged": "com.sauban.mymemory.app-release-4:/xml_backup_rules.xml.flat",
+        "source": "com.sauban.mymemory.app-main-5:/xml/backup_rules.xml"
+    },
+    {
+        "merged": "com.sauban.mymemory.app-release-4:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "com.sauban.mymemory.app-main-5:/mipmap-hdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.sauban.mymemory.app-release-4:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "com.sauban.mymemory.app-main-5:/mipmap-xxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.sauban.mymemory.app-release-4:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "com.sauban.mymemory.app-main-5:/drawable/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.sauban.mymemory.app-release-4:/anim_from_top_anim.xml.flat",
+        "source": "com.sauban.mymemory.app-main-5:/anim/from_top_anim.xml"
+    },
+    {
+        "merged": "com.sauban.mymemory.app-release-4:/drawable_ic_menu.xml.flat",
+        "source": "com.sauban.mymemory.app-main-5:/drawable/ic_menu.xml"
+    },
+    {
+        "merged": "com.sauban.mymemory.app-release-4:/drawable_background_gradient_light.xml.flat",
+        "source": "com.sauban.mymemory.app-main-5:/drawable/background_gradient_light.xml"
+    },
+    {
+        "merged": "com.sauban.mymemory.app-release-4:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.sauban.mymemory.app-main-5:/mipmap-xxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.sauban.mymemory.app-release-4:/layout_memory_card.xml.flat",
+        "source": "com.sauban.mymemory.app-main-5:/layout/memory_card.xml"
+    },
+    {
+        "merged": "com.sauban.mymemory.app-release-4:/mipmap-xxhdpi_ic_launcher_foreground.webp.flat",
+        "source": "com.sauban.mymemory.app-main-5:/mipmap-xxhdpi/ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "com.sauban.mymemory.app-release-4:/mipmap-hdpi_ic_launcher_foreground.webp.flat",
+        "source": "com.sauban.mymemory.app-main-5:/mipmap-hdpi/ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "com.sauban.mymemory.app-release-4:/mipmap-mdpi_ic_launcher_monochrome.png.flat",
+        "source": "com.sauban.mymemory.app-main-5:/mipmap-mdpi/ic_launcher_monochrome.png"
+    },
+    {
+        "merged": "com.sauban.mymemory.app-release-4:/drawable_ic_plane.xml.flat",
+        "source": "com.sauban.mymemory.app-main-5:/drawable/ic_plane.xml"
+    },
+    {
+        "merged": "com.sauban.mymemory.app-release-4:/layout_dialog_board_size.xml.flat",
+        "source": "com.sauban.mymemory.app-main-5:/layout/dialog_board_size.xml"
+    },
+    {
+        "merged": "com.sauban.mymemory.app-release-4:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "com.sauban.mymemory.app-main-5:/mipmap-anydpi-v26/ic_launcher.xml"
+    },
+    {
+        "merged": "com.sauban.mymemory.app-release-4:/mipmap-xhdpi_ic_launcher_monochrome.png.flat",
+        "source": "com.sauban.mymemory.app-main-5:/mipmap-xhdpi/ic_launcher_monochrome.png"
+    },
+    {
+        "merged": "com.sauban.mymemory.app-release-4:/anim_rotate_anti_clock_wise.xml.flat",
+        "source": "com.sauban.mymemory.app-main-5:/anim/rotate_anti_clock_wise.xml"
+    },
+    {
+        "merged": "com.sauban.mymemory.app-release-4:/drawable_ic_speaker.xml.flat",
+        "source": "com.sauban.mymemory.app-main-5:/drawable/ic_speaker.xml"
+    },
+    {
+        "merged": "com.sauban.mymemory.app-release-4:/drawable_ic_edit.xml.flat",
+        "source": "com.sauban.mymemory.app-main-5:/drawable/ic_edit.xml"
+    },
+    {
+        "merged": "com.sauban.mymemory.app-release-4:/drawable_ic_bike.xml.flat",
+        "source": "com.sauban.mymemory.app-main-5:/drawable/ic_bike.xml"
+    },
+    {
+        "merged": "com.sauban.mymemory.app-release-4:/drawable_background_gradient_dark.xml.flat",
+        "source": "com.sauban.mymemory.app-main-5:/drawable/background_gradient_dark.xml"
+    },
+    {
+        "merged": "com.sauban.mymemory.app-release-4:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "com.sauban.mymemory.app-main-5:/mipmap-mdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.sauban.mymemory.app-release-4:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "com.sauban.mymemory.app-main-5:/mipmap-hdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.sauban.mymemory.app-release-4:/drawable_ic_temple.xml.flat",
+        "source": "com.sauban.mymemory.app-main-5:/drawable/ic_temple.xml"
+    },
+    {
+        "merged": "com.sauban.mymemory.app-release-4:/drawable_ic_food.xml.flat",
+        "source": "com.sauban.mymemory.app-main-5:/drawable/ic_food.xml"
+    },
+    {
+        "merged": "com.sauban.mymemory.app-release-4:/anim_to_top_anim.xml.flat",
+        "source": "com.sauban.mymemory.app-main-5:/anim/to_top_anim.xml"
+    },
+    {
+        "merged": "com.sauban.mymemory.app-release-4:/drawable_ic_watch.xml.flat",
+        "source": "com.sauban.mymemory.app-main-5:/drawable/ic_watch.xml"
+    },
+    {
+        "merged": "com.sauban.mymemory.app-release-4:/drawable_ic_flower.xml.flat",
+        "source": "com.sauban.mymemory.app-main-5:/drawable/ic_flower.xml"
+    },
+    {
+        "merged": "com.sauban.mymemory.app-release-4:/mipmap-hdpi_ic_launcher_background.png.flat",
+        "source": "com.sauban.mymemory.app-main-5:/mipmap-hdpi/ic_launcher_background.png"
+    },
+    {
+        "merged": "com.sauban.mymemory.app-release-4:/drawable_fab_text_bg.xml.flat",
+        "source": "com.sauban.mymemory.app-main-5:/drawable/fab_text_bg.xml"
+    },
+    {
+        "merged": "com.sauban.mymemory.app-release-4:/drawable_ic_rocket.xml.flat",
+        "source": "com.sauban.mymemory.app-main-5:/drawable/ic_rocket.xml"
+    },
+    {
+        "merged": "com.sauban.mymemory.app-release-4:/drawable_ic_taxi.xml.flat",
+        "source": "com.sauban.mymemory.app-main-5:/drawable/ic_taxi.xml"
+    },
+    {
+        "merged": "com.sauban.mymemory.app-release-4:/animator_fab_elevation_animator.xml.flat",
+        "source": "com.sauban.mymemory.app-main-5:/animator/fab_elevation_animator.xml"
+    },
+    {
+        "merged": "com.sauban.mymemory.app-release-4:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "com.sauban.mymemory.app-main-5:/mipmap-xhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.sauban.mymemory.app-release-4:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.sauban.mymemory.app-main-5:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "com.sauban.mymemory.app-release-4:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "com.sauban.mymemory.app-main-5:/mipmap-anydpi-v26/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.sauban.mymemory.app-release-4:/drawable_ic_custom.xml.flat",
+        "source": "com.sauban.mymemory.app-main-5:/drawable/ic_custom.xml"
+    },
+    {
+        "merged": "com.sauban.mymemory.app-release-4:/mipmap-xhdpi_ic_launcher_foreground.webp.flat",
+        "source": "com.sauban.mymemory.app-main-5:/mipmap-xhdpi/ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "com.sauban.mymemory.app-release-4:/anim_rotate_clock_wise.xml.flat",
+        "source": "com.sauban.mymemory.app-main-5:/anim/rotate_clock_wise.xml"
+    },
+    {
+        "merged": "com.sauban.mymemory.app-release-4:/drawable_ic_face.xml.flat",
+        "source": "com.sauban.mymemory.app-main-5:/drawable/ic_face.xml"
+    },
+    {
+        "merged": "com.sauban.mymemory.app-release-4:/mipmap-hdpi_ic_launcher_monochrome.png.flat",
+        "source": "com.sauban.mymemory.app-main-5:/mipmap-hdpi/ic_launcher_monochrome.png"
+    },
+    {
+        "merged": "com.sauban.mymemory.app-release-4:/drawable_ic_skate.xml.flat",
+        "source": "com.sauban.mymemory.app-main-5:/drawable/ic_skate.xml"
+    },
+    {
+        "merged": "com.sauban.mymemory.app-release-4:/layout_activity_main.xml.flat",
+        "source": "com.sauban.mymemory.app-main-5:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.sauban.mymemory.app-release-4:/drawable_ic_phone.xml.flat",
+        "source": "com.sauban.mymemory.app-main-5:/drawable/ic_phone.xml"
+    },
+    {
+        "merged": "com.sauban.mymemory.app-release-4:/mipmap-mdpi_ic_launcher_background.png.flat",
+        "source": "com.sauban.mymemory.app-main-5:/mipmap-mdpi/ic_launcher_background.png"
+    },
+    {
+        "merged": "com.sauban.mymemory.app-release-4:/mipmap-xhdpi_ic_launcher_background.png.flat",
+        "source": "com.sauban.mymemory.app-main-5:/mipmap-xhdpi/ic_launcher_background.png"
+    },
+    {
+        "merged": "com.sauban.mymemory.app-release-4:/mipmap-mdpi_ic_launcher_foreground.webp.flat",
+        "source": "com.sauban.mymemory.app-main-5:/mipmap-mdpi/ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "com.sauban.mymemory.app-release-4:/drawable_ic_refresh.xml.flat",
+        "source": "com.sauban.mymemory.app-main-5:/drawable/ic_refresh.xml"
+    },
+    {
+        "merged": "com.sauban.mymemory.app-release-4:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.sauban.mymemory.app-main-5:/mipmap-xxxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.sauban.mymemory.app-release-4:/drawable_ic_back.xml.flat",
+        "source": "com.sauban.mymemory.app-main-5:/drawable/ic_back.xml"
+    },
+    {
+        "merged": "com.sauban.mymemory.app-release-4:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "com.sauban.mymemory.app-main-5:/mipmap-mdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.sauban.mymemory.app-release-4:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "com.sauban.mymemory.app-main-5:/mipmap-xhdpi/ic_launcher.webp"
+    }
+]
