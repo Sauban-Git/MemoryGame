@@ -22,7 +22,7 @@ android {
     }
 
     val keystorePropertiesFile = rootProject.file("keystore.properties")
-    var releaseSigning = signingConfigs.getByName("release")
+    var releaseSigning = signingConfigs.getByName("debug")
 
     try {
         val keystoreProperties = Properties()
