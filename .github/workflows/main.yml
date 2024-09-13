@@ -15,6 +15,11 @@ jobs:
           distribution: 'temurin'
           cache: gradle
 
+      - name: Setup Android SDK
+        uses: android-actions/setup-android@v2
+        with:
+          sdk-version: '34'
+
       - name: Cache Gradle files
         uses: actions/cache@v2
         with:
@@ -35,7 +40,7 @@ jobs:
           MYAPP_RELEASE_STOREFILE: ${{ secrets.MYAPP_RELEASE_STOREFILE }}
           
       - name: Build with Gradle
-        run: ./gradlew assembleRelease
+        run: ./gradlew clean assembleRelease
 
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v4.4.0
