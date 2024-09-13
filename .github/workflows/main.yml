@@ -21,13 +21,16 @@ jobs:
         run: echo "${{ secrets.MYAPP_RELEASE_STORE_FILE }}" | base64 --decode > android_keystore.jks
         shell: bash
         
+      - name: Create keystore.properties file
+        run: |
+          echo "storeFile=android_keystore.jks" >> keystore.properties
+          echo "storePassword=${{ secrets.MYAPP_RELEASE_STORE_PASSWORD }}" >> keystore.properties
+          echo "keyAlias=${{ secrets.MYAPP_RELEASE_KEY_ALIAS }}" >> keystore.properties
+          echo "keyPassword=${{ secrets.MYAPP_RELEASE_KEY_PASSWORD }}" >> keystore.properties
+
+        
       - name: Build with Gradle
         run: ./gradlew assembleRelease
-        env:
-          ANDROID_KEYSTORE: android_keystore.jks
-          ANDROID_KEYSTORE_PASSWORD: ${{ secrets.MYAPP_RELEASE_STORE_PASSWORD }}
-          ANDROID_KEY_ALIAS: ${{ secrets.MYAPP_RELEASE_KEY_ALIAS }}
-          ANDROID_KEY_PASSWORD: ${{ secrets.MYAPP_RELEASE_KEY_PASSWORD }}
 
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v4
