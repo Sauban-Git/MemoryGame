@@ -1,6 +1,8 @@
-name: AndroidBuild
+name: TestBuild
 on:
-  workflow_dispatch:
+  push:
+    branches:
+      - test
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -33,33 +35,34 @@ jobs:
 
         
       - name: Build with Gradle
-        run: ./gradlew assembleRelease
+        run: ./gradlew assembleDebug
 
-      # - name: Upload a Build Artifact
-      #   uses: actions/upload-artifact@v4
-      #   with:
-      #     name: "Release"
-      #     path: app/build/outputs/apk/release/*.apk
-      #     if-no-files-found: error
+      - name: Upload a Build Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: "Release"
+          path: app/build/outputs/apk/debug/*.apk
+          # path: app/build/outputs/apk/release/*.apk
+          if-no-files-found: error
             
 
-      - name: Create Release
-        id: create_release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.API_KEY }}
-        with:
-          tag_name: v1.1
-          release_name: "MemoryGame v1.1"
-          draft: false
-          prerelease: false
+      # - name: Create Release
+      #   id: create_release
+      #   uses: actions/create-release@v1
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.API_KEY }}
+      #   with:
+      #     tag_name: v1.1
+      #     release_name: "MemoryGame v1.1"
+      #     draft: false
+      #     prerelease: false
 
-      - name: Upload APK to release
-        uses: actions/upload-release-asset@v1
-        env: 
-          GITHUB_TOKEN: ${{ secrets.API_KEY }}
-        with:
-          upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: app/build/outputs/apk/release/app-release.apk
-          asset_name: MemoryGame.apk
-          asset_content_type: application/vnd.android.package-archive
+      # - name: Upload APK to release
+      #   uses: actions/upload-release-asset@v1
+      #   env: 
+      #     GITHUB_TOKEN: ${{ secrets.API_KEY }}
+      #   with:
+      #     upload_url: ${{ steps.create_release.outputs.upload_url }}
+      #     asset_path: app/build/outputs/apk/release/app-release.apk
+      #     asset_name: MemoryGame.apk
+      #     asset_content_type: application/vnd.android.package-archive
