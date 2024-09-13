@@ -16,7 +16,7 @@ jobs:
           cache: gradle
 
       - name: Cache Gradle files
-        uses: actions/caache@v2
+        uses: actions/cache@v2
         with:
           path: |
             ~/.gradle/caches
