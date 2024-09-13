@@ -20,7 +20,7 @@ android {
 
     signingConfigs {
         create("release") {
-            storeFile = file("app/${keystoreProperties["storeFile"] ?: ""}")
+            storeFile = file(keystoreProperties["storeFile"] ?: "")
             storePassword = keystoreProperties["storePassword"]?.toString() ?: ""
             keyAlias = keystoreProperties["keyAlias"]?.toString() ?: ""
             keyPassword = keystoreProperties["keyPassword"]?.toString() ?: ""
