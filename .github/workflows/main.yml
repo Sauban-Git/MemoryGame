@@ -18,7 +18,7 @@ jobs:
         run: chmod +x gradlew
 
       - name: Decoding keystore
-        run: echo "${{ secrets.MYAPP_RELEASE_STORE_FILE }}" | base64 --decode > android_keystore.jks
+        run: echo "${{ secrets.MYAPP_RELEASE_STORE_FILE }}" | base64 --decode > app/android_keystore.jks
         shell: bash
 
       - name: List files
@@ -26,7 +26,7 @@ jobs:
         
       - name: Create keystore.properties file
         run: |
-          echo "storeFile=app/android_keystore.jks" >> keystore.properties
+          echo "storeFile=android_keystore.jks" >> keystore.properties
           echo "storePassword=${{ secrets.MYAPP_RELEASE_STORE_PASSWORD }}" >> keystore.properties
           echo "keyAlias=${{ secrets.MYAPP_RELEASE_KEY_ALIAS }}" >> keystore.properties
           echo "keyPassword=${{ secrets.MYAPP_RELEASE_KEY_PASSWORD }}" >> keystore.properties
