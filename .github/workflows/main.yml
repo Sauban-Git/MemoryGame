@@ -22,9 +22,9 @@ jobs:
       - name: Build with Gradle
         run: ./gradlew assembleRelease
         env:
-          ANDROID_KEYSTORE_PASSWORD: ${{ screts.MYAPP_RELEASE_STORE_PASSWORD }}
-          ANDROID_KEY_ALIAS: ${{ screts.MYAPP_RELEASE_KEY_ALIAS }}
-          ANDROID_KEY_PASSWORD: ${{ screts.MYAPP_RELEASE_KEY_PASSWORD }}
+          ANDROID_KEYSTORE_PASSWORD: ${{ secrets.MYAPP_RELEASE_STORE_PASSWORD }}
+          ANDROID_KEY_ALIAS: ${{ secrets.MYAPP_RELEASE_KEY_ALIAS }}
+          ANDROID_KEY_PASSWORD: ${{ secrets.MYAPP_RELEASE_KEY_PASSWORD }}
 
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v4
