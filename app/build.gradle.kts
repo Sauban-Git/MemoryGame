@@ -2,6 +2,13 @@ import org.jetbrains.kotlin.fir.resolve.calls.tower.TowerScopeLevel
 import java.io.FileInputStream
 import java.util.Properties
 
+val keystorePropertiesFile = rootProject.file("keystore.properties")
+val keystoreProperties = Properties()
+
+if (keystorePropertiesFile.exists()) {
+    keystoreProperties.load(FileInputStream(keystorePropertiesFile))
+}
+
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
@@ -12,11 +19,11 @@ android {
     compileSdk = 34
 
     signingConfigs {
-        release {
-            storeFile file(System.getenv("ANDROID_KEYSTORE"))
-            storePassword System.getenv("ANDROID_KEYSTORE_PASSWORD")
-            keyAlias System.getenv("ANDROID_KEY_ALIAS")
-            keyPassword System.getenv("ANDROID_KEY_PASSWORD")
+        create("release") {
+            storeFile = file(keystoreProperties["storeFile"] ?: "")
+            storePassword = keystoreProperties["storePassword"]?.toString() ?: ""
+            keyAlias = keystoreProperties["keyAlias"]?.toString() ?: ""
+            keyPassword = keystoreProperties["keyPassword"]?.toString() ?: ""
         }
     }
 
@@ -32,7 +39,7 @@ android {
 
     buildTypes {
         release {
-            signingConfig signConfigs.release
+            signingConfig = signConfigs.getByName("release")
             isMinifyEnabled = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
