@@ -16,10 +16,15 @@ jobs:
 
       - name: permission
         run: chmod +x gradlew
+
+      - name: Decoding keystore
+        run: echo "${{ secrets.MYAPP_RELEASE_STORE_FILE }}" | base64 --decode > android_keystore.jks
+        shell: bash
         
       - name: Build with Gradle
         run: ./gradlew assembleRelease
         env:
+          ANDROID_KEYSTORE: android_keystore.jks
           ANDROID_KEYSTORE_PASSWORD: ${{ secrets.MYAPP_RELEASE_STORE_PASSWORD }}
           ANDROID_KEY_ALIAS: ${{ secrets.MYAPP_RELEASE_KEY_ALIAS }}
           ANDROID_KEY_PASSWORD: ${{ secrets.MYAPP_RELEASE_KEY_PASSWORD }}
