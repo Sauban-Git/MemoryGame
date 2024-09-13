@@ -5,6 +5,8 @@ import android.annotation.SuppressLint
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -13,6 +15,7 @@ import android.view.animation.AnimationUtils
 import android.widget.RadioGroup
 import android.widget.TextView
 import android.widget.Toast
+import android.window.OnBackInvokedDispatcher
 import androidx.appcompat.app.AlertDialog
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
@@ -120,14 +123,6 @@ class MainActivity : AppCompatActivity() {
 
         setupBoard()
     }
-    override fun onBackPressed() {
-
-        if (isExpanded) {
-            shrinkFab()
-        }else {
-            super.onBackPressed()
-        }
-    }
 
 
     private fun expandFab() {
@@ -169,6 +164,7 @@ class MainActivity : AppCompatActivity() {
         dialog.show()
     }
 
+    @SuppressLint("SetTextI18n")
     private fun setupBoard() {
         when (boardSize) {
             BoardSize.EASY -> {
@@ -195,8 +191,26 @@ class MainActivity : AppCompatActivity() {
         rvBoard.adapter = adapter
         rvBoard.setHasFixedSize(true)
         rvBoard.layoutManager = GridLayoutManager(this,boardSize.getWidth())
+
+        showAllCardsTemporarily()
     }
 
+    @SuppressLint("NotifyDataSetChanged")
+    private fun showAllCardsTemporarily() {
+        for (i in 0 until memoryGame.cards.size) {
+            memoryGame.cards[i].isFaceUp = true
+        }
+        adapter.notifyDataSetChanged()
+
+        Handler(Looper.getMainLooper()).postDelayed({
+            for (i in 0 until memoryGame.cards.size) {
+                memoryGame.cards[i].isFaceUp = false
+            }
+            adapter.notifyDataSetChanged()
+        },2000)
+    }
+
+    @SuppressLint("SetTextI18n", "NotifyDataSetChanged")
     private fun updateGameWithFlip(position: Int) {
         //Error checking
         if (isExpanded) shrinkFab()

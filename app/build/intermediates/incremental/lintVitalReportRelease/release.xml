@@ -27,6 +27,6 @@
       applicationId="com.sauban.mymemory"
       generatedSourceFolders="build/generated/ap_generated_sources/release/out:build/generated/data_binding_base_class_source_out/release/out"
       generatedResourceFolders="build/generated/res/resValues/release"
-      desugaredMethodsFiles="/home/sauban/.gradle/caches/transforms-3/5dab5da10b49ae358b8af5d21663955a/transformed/D8BackportedDesugaredMethods.txt">
+      desugaredMethodsFiles="/root/.gradle/caches/transforms-3/5dab5da10b49ae358b8af5d21663955a/transformed/D8BackportedDesugaredMethods.txt">
   </mainArtifact>
 </variant>

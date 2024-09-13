@@ -16,7 +16,8 @@
         android:background="@android:color/transparent"
         app:circularflow_defaultRadius="20dp"
         app:circularflow_radiusInDP="20dp"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints">
 
 
         <RadioButton

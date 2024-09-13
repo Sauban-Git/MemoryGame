@@ -1,10 +1,10 @@
-#Sat Sep 07 23:51:08 IST 2024
-base.0=/home/sauban/AndroidStudioProjects/MyMemory/app/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex
-base.1=/home/sauban/AndroidStudioProjects/MyMemory/app/build/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex
-base.2=/home/sauban/AndroidStudioProjects/MyMemory/app/build/intermediates/dex/debug/mergeProjectDexDebug/1/classes.dex
-base.3=/home/sauban/AndroidStudioProjects/MyMemory/app/build/intermediates/dex/debug/mergeProjectDexDebug/10/classes.dex
-base.4=/home/sauban/AndroidStudioProjects/MyMemory/app/build/intermediates/dex/debug/mergeProjectDexDebug/4/classes.dex
-base.5=/home/sauban/AndroidStudioProjects/MyMemory/app/build/intermediates/dex/debug/mergeProjectDexDebug/7/classes.dex
+#Fri Sep 13 10:18:05 IST 2024
+base.0=/home/sauban/Documents/GitHub/MemoryGame/app/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex
+base.1=/home/sauban/Documents/GitHub/MemoryGame/app/build/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex
+base.2=/home/sauban/Documents/GitHub/MemoryGame/app/build/intermediates/dex/debug/mergeProjectDexDebug/1/classes.dex
+base.3=/home/sauban/Documents/GitHub/MemoryGame/app/build/intermediates/dex/debug/mergeProjectDexDebug/10/classes.dex
+base.4=/home/sauban/Documents/GitHub/MemoryGame/app/build/intermediates/dex/debug/mergeProjectDexDebug/4/classes.dex
+base.5=/home/sauban/Documents/GitHub/MemoryGame/app/build/intermediates/dex/debug/mergeProjectDexDebug/7/classes.dex
 path.0=classes.dex
 path.1=0/classes.dex
 path.2=1/classes.dex

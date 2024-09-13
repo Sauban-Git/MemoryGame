@@ -1,18 +1,14 @@
 [
     {
-        "merged": "com.sauban.mymemory.app-mergeReleaseResources-28:/layout/dialog_board_size.xml",
-        "source": "com.sauban.mymemory.app-main-30:/layout/dialog_board_size.xml"
+        "merged": "com.sauban.mymemory.app-mergeReleaseResources-3:/layout/memory_card.xml",
+        "source": "com.sauban.mymemory.app-main-5:/layout/memory_card.xml"
     },
     {
-        "merged": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-mergeReleaseResources-28:/layout/activity_main.xml",
-        "source": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-main-30:/layout/activity_main.xml"
+        "merged": "com.sauban.mymemory.app-mergeReleaseResources-3:/layout/dialog_board_size.xml",
+        "source": "com.sauban.mymemory.app-main-5:/layout/dialog_board_size.xml"
     },
     {
-        "merged": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-mergeReleaseResources-28:/layout/dialog_board_size.xml",
-        "source": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-main-30:/layout/dialog_board_size.xml"
-    },
-    {
-        "merged": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-mergeReleaseResources-28:/layout/memory_card.xml",
-        "source": "/home/sauban/.gradle/daemon/8.0/com.sauban.mymemory.app-main-30:/layout/memory_card.xml"
+        "merged": "com.sauban.mymemory.app-mergeReleaseResources-3:/layout/activity_main.xml",
+        "source": "com.sauban.mymemory.app-main-5:/layout/activity_main.xml"
     }
 ]

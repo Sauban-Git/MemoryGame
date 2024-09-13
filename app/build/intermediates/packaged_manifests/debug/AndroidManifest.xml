@@ -28,9 +28,6 @@
         android:testOnly="true"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.sauban.mymemory.CreateActivity"
-            android:exported="false" />
-        <activity
             android:name="com.sauban.mymemory.MainActivity"
             android:configChanges="uiMode|screenSize|orientation"
             android:exported="true" >
