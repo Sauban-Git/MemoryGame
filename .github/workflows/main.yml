@@ -15,9 +15,12 @@ jobs:
         with:
           java-version: '17'
           distribution: 'adopt'
+
+      - name: permission
+        run: chmod +x ./gradlew
         
       - name: Build with Gradle
-        run: ./gradlew build --warning-mode all
+        run: ./gradlew build
           
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v4.4.0
