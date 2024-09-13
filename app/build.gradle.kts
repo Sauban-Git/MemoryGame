@@ -21,26 +21,20 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
-    val keystorePropertiesFile = rootProject.file("keystore.properties")
-    var releaseSigning = signingConfigs.getByName("debug")
-
-    try {
-        val keystoreProperties = Properties()
-        FileInputStream(keystorePropertiesFile).use { inputStream ->
-            keystoreProperties.load(inputStream)
+    signingConfigs {
+        release {
+            if (project.hasProperty('MYAPP_RLEASE_STORE_FILE')) {
+                storeFile file(project.MYAPP_RLEASE_STORE_FILE)
+                storePassword project.MYAPP_RLEASE_STORE_PASSWORD
+                keyAlias project.MYAPP_RLEASE_KEY_ALIAS
+                keyPassword project.MYAPP_RLEASE_KEY_PASSWORD
+            }
         }
-
-        releaseSigning = signingConfigs.create("release") {
-            keyAlias = keystoreProperties.getProperty("keyAlias")
-            keyPassword = keystoreProperties.getProperty("keyPassword")
-            storeFile = rootProject.file(keystoreProperties.getProperty("storeFile"))
-            storePassword = keystoreProperties.getProperty("storePassword")
-        }
-    } catch (ignored: Exception) {
     }
 
     buildTypes {
         release {
+            signingConfig signingConfigs.release
             isMinifyEnabled = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
