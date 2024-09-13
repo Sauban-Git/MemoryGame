@@ -30,7 +30,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: "Release"
-          path: app/release/*.apk
+          path: app/build/outputs/apk/release/*.apk
           if-no-files-found: error
             
 
