@@ -22,7 +22,7 @@ jobs:
         shell: bash
 
       - name: List files
-        run: ls -la
+        run: ls -la app
         
       - name: Create keystore.properties file
         run: |
