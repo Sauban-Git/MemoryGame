@@ -40,7 +40,6 @@ android {
             )
         }
         debug {
-            signingConfig signingConfigs.release
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
