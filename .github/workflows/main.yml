@@ -20,6 +20,9 @@ jobs:
       - name: Decoding keystore
         run: echo "${{ secrets.MYAPP_RELEASE_STORE_FILE }}" | base64 --decode > android_keystore.jks
         shell: bash
+
+      - name: List files
+        run: ls -la
         
       - name: Create keystore.properties file
         run: |
