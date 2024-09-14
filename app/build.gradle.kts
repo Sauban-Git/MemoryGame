@@ -18,41 +18,41 @@ android {
     namespace = "com.sauban.mymemory"
     compileSdk = 34
 
-    signingConfigs {
-        create("release") {
-            storeFile = file(keystoreProperties["storeFile"] ?: "")
-            storePassword = keystoreProperties["storePassword"]?.toString() ?: ""
-            keyAlias = keystoreProperties["keyAlias"]?.toString() ?: ""
-            keyPassword = keystoreProperties["keyPassword"]?.toString() ?: ""
-        }
-    }
+//    signingConfigs {
+//        create("release") {
+//            storeFile = file(keystoreProperties["storeFile"] ?: "")
+//            storePassword = keystoreProperties["storePassword"]?.toString() ?: ""
+//            keyAlias = keystoreProperties["keyAlias"]?.toString() ?: ""
+//            keyPassword = keystoreProperties["keyPassword"]?.toString() ?: ""
+//        }
+//    }
 
     defaultConfig {
         applicationId = "com.sauban.mymemory"
         minSdk = 24
         targetSdk = 34
-        versionCode = 1
-        versionName = "1.1"
+        versionCode = 2
+        versionName = "1.2"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
         release {
-            signingConfig = signingConfigs.getByName("release")
+//            signingConfig = signingConfigs.getByName("release")
             isMinifyEnabled = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
         }
-        debug {
-            isMinifyEnabled = false
-            proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
-        )
-       }
+//        debug {
+//            isMinifyEnabled = false
+//            proguardFiles(
+//                getDefaultProguardFile("proguard-android-optimize.txt"),
+//                "proguard-rules.pro"
+//        )
+//       }
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
