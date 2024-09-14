@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /home/sauban/Documents/GitHub/MemoryGame/app/src/main/AndroidManifest.xml:2:1-27:12
-INJECTED from /home/sauban/Documents/GitHub/MemoryGame/app/src/main/AndroidManifest.xml:2:1-27:12
-INJECTED from /home/sauban/Documents/GitHub/MemoryGame/app/src/main/AndroidManifest.xml:2:1-27:12
-INJECTED from /home/sauban/Documents/GitHub/MemoryGame/app/src/main/AndroidManifest.xml:2:1-27:12
+ADDED from /home/sauban/Documents/GitHub/MemoryGame/app/src/main/AndroidManifest.xml:2:1-32:12
+INJECTED from /home/sauban/Documents/GitHub/MemoryGame/app/src/main/AndroidManifest.xml:2:1-32:12
+INJECTED from /home/sauban/Documents/GitHub/MemoryGame/app/src/main/AndroidManifest.xml:2:1-32:12
+INJECTED from /home/sauban/Documents/GitHub/MemoryGame/app/src/main/AndroidManifest.xml:2:1-32:12
 MERGED from [androidx.databinding:viewbinding:8.6.0] /home/sauban/.gradle/caches/transforms-4/2d799425cb04b9a68775c373bbd0b650/transformed/viewbinding-8.6.0/AndroidManifest.xml:2:1-7:12
 MERGED from [com.google.android.material:material:1.12.0] /home/sauban/.gradle/caches/transforms-4/ce0ed96877321bafa905c999423aa73b/transformed/material-1.12.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /home/sauban/.gradle/caches/transforms-4/ccb71a12cd3f15da5f47ac627cc4a7eb/transformed/constraintlayout-2.1.4/AndroidManifest.xml:2:1-11:12
@@ -58,8 +58,8 @@ MERGED from [androidx.annotation:annotation-experimental:1.4.0] /home/sauban/.gr
 	xmlns:android
 		ADDED from /home/sauban/Documents/GitHub/MemoryGame/app/src/main/AndroidManifest.xml:2:11-69
 application
-ADDED from /home/sauban/Documents/GitHub/MemoryGame/app/src/main/AndroidManifest.xml:5:5-25:19
-INJECTED from /home/sauban/Documents/GitHub/MemoryGame/app/src/main/AndroidManifest.xml:5:5-25:19
+ADDED from /home/sauban/Documents/GitHub/MemoryGame/app/src/main/AndroidManifest.xml:5:5-30:19
+INJECTED from /home/sauban/Documents/GitHub/MemoryGame/app/src/main/AndroidManifest.xml:5:5-30:19
 MERGED from [com.google.android.material:material:1.12.0] /home/sauban/.gradle/caches/transforms-4/ce0ed96877321bafa905c999423aa73b/transformed/material-1.12.0/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.12.0] /home/sauban/.gradle/caches/transforms-4/ce0ed96877321bafa905c999423aa73b/transformed/material-1.12.0/AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /home/sauban/.gradle/caches/transforms-4/ccb71a12cd3f15da5f47ac627cc4a7eb/transformed/constraintlayout-2.1.4/AndroidManifest.xml:9:5-20
@@ -116,6 +116,14 @@ category#android.intent.category.LAUNCHER
 ADDED from /home/sauban/Documents/GitHub/MemoryGame/app/src/main/AndroidManifest.xml:22:17-77
 	android:name
 		ADDED from /home/sauban/Documents/GitHub/MemoryGame/app/src/main/AndroidManifest.xml:22:27-74
+service#com.sauban.mymemory.utils.MusicService
+ADDED from /home/sauban/Documents/GitHub/MemoryGame/app/src/main/AndroidManifest.xml:25:9-29:15
+	android:enabled
+		ADDED from /home/sauban/Documents/GitHub/MemoryGame/app/src/main/AndroidManifest.xml:27:13-35
+	android:exported
+		ADDED from /home/sauban/Documents/GitHub/MemoryGame/app/src/main/AndroidManifest.xml:28:13-37
+	android:name
+		ADDED from /home/sauban/Documents/GitHub/MemoryGame/app/src/main/AndroidManifest.xml:26:13-47
 uses-sdk
 INJECTED from /home/sauban/Documents/GitHub/MemoryGame/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /home/sauban/Documents/GitHub/MemoryGame/app/src/main/AndroidManifest.xml
