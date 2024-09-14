@@ -25,8 +25,8 @@ jobs:
         id: extract_version_info
         run: |
           # Extract versionCode and versionName from build.gradle
-          VERSION_CODE=$(grep "versionCode" app/build.gradle | head -n 1 | sed 's/.*versionCode\s*=\s*.*/\1/')
-          VERSION_NAME=$(grep "versionName" app/build.gradle | head -n 1 | sed 's/.*versionName\s*=\s*".*"/\1/')
+          VERSION_CODE=$(grep "versionCode" app/build.gradle.kts | head -n 1 | sed 's/.*versionCode\s*=\s*.*/\1/')
+          VERSION_NAME=$(grep "versionName" app/build.gradle.kts | head -n 1 | sed 's/.*versionName\s*=\s*".*"/\1/')
           # Set output values
           echo "VERSION_CODE=$VERSION_CODE" >> $GITHUB_ENV
           echo "VERSION_NAME=$VERSION_NAME" >> $GITHUB_ENV
