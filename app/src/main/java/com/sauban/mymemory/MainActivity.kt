@@ -109,7 +109,7 @@ class MainActivity : AppCompatActivity() {
 
         binding.refreshBtn.setOnClickListener(View.OnClickListener {
             if (memoryGame.getNumMoves() > 0 && !memoryGame.haveWonGame() ) {
-                showAlertDialog("Quit Your Current Progress", null, View.OnClickListener {
+                showAlertDialog("Do you want to quit your progress?", null, View.OnClickListener {
                     Toast.makeText(this, "Game refreshed!",Toast.LENGTH_SHORT).show()
                     setupBoard()
                 })
@@ -238,7 +238,6 @@ class MainActivity : AppCompatActivity() {
             if (memoryGame.haveWonGame()) {
                 Toast.makeText(this, "Congratulations! You have won the Game",Toast.LENGTH_SHORT).show()
                 CommonConfetti.rainingConfetti(clRoot, intArrayOf(Color.YELLOW, Color.GREEN, Color.MAGENTA)).oneShot()
-
 
             }
         }
