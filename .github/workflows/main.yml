@@ -21,8 +21,15 @@ jobs:
         run: echo "${{ secrets.MYAPP_RELEASE_STORE_FILE }}" | base64 --decode > app/android_keystore.jks
         shell: bash
 
-      - name: List files
-        run: ls -la app
+      - name: Extract version info
+        id: extract_version_info
+        run: |
+          # Extract versionCode and versionName from build.gradle
+          VERSION_CODE=$(grep "versionCode" app/build.gradle | head -n 1 | sed 's/.*versionCode\s*=\s*.*/\1/')
+          VERSION_NAME=$(grep "versionName" app/build.gradle | head -n 1 | sed 's/.*versionName\s*=\s*".*"/\1/')
+          # Set output values
+          echo "VERSION_CODE=$VERSION_CODE" >> $GITHUB_ENV
+          echo "VERSION_NAME=$VERSION_NAME" >> $GITHUB_ENV
         
       - name: Create keystore.properties file
         run: |
@@ -49,8 +56,12 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.API_KEY }}
         with:
-          tag_name: v1.2
-          release_name: "MemoryGame v1.2"
+          tag_name: v${{ env.VERSION_NAME }}
+          release_name: MemoryGame ${{ env.VERSION_NAME }}
+          body: |
+            Release details:
+              - Version Code: ${{ env.VERSION_CODE }}
+              - Version Name: ${{ env.VERSION_NAME }}
           draft: false
           prerelease: false
 
@@ -61,5 +72,5 @@ jobs:
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
           asset_path: app/build/outputs/apk/release/app-release.apk
-          asset_name: MemoryGame.apk
+          asset_name: MemoryGame-${{ env.VERSION_NAME }}.apk
           asset_content_type: application/vnd.android.package-archive
