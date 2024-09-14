@@ -69,6 +69,11 @@ mipmap ic_launcher_background
 mipmap ic_launcher_foreground
 mipmap ic_launcher_monochrome
 mipmap ic_launcher_round
+raw bgmusic
+raw error
+raw excellent
+raw flip
+raw pairmatch
 string app_name
 string imagebutton
 style AppTheme

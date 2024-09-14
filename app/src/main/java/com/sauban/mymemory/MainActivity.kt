@@ -2,7 +2,9 @@ package com.sauban.mymemory
 
 import android.animation.ArgbEvaluator
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.graphics.Color
+import android.media.SoundPool
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
@@ -26,6 +28,7 @@ import com.google.android.material.snackbar.Snackbar
 import com.sauban.mymemory.databinding.ActivityMainBinding
 import com.sauban.mymemory.models.BoardSize
 import com.sauban.mymemory.models.MemoryGame
+import com.sauban.mymemory.utils.MusicService
 
 
 class MainActivity : AppCompatActivity() {
@@ -36,6 +39,9 @@ class MainActivity : AppCompatActivity() {
         private const val CREATE_REQUEST_CODE = 814155
     }
 
+    private val soundPool by lazy {
+        SoundPool.Builder().setMaxStreams(5).build()
+    }
     private lateinit var clRoot: ConstraintLayout
     private lateinit var rvBoard: RecyclerView
     private lateinit var tvNumMoves: TextView
@@ -62,6 +68,11 @@ class MainActivity : AppCompatActivity() {
     private lateinit var adapter: MemoryBoardAdaptor
     private var boardSize: BoardSize = BoardSize.EASY
 
+    private var soundFlip: Int = 0
+    private var soundWrong: Int = 0
+    private var soundMatched: Int = 0
+    private var soundCompliment: Int = 0
+
 
 
     @SuppressLint("MissingInflatedId")
@@ -70,12 +81,18 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
+        val intent = Intent(this, MusicService::class.java)
+        startService(intent)
 
         clRoot = findViewById(R.id.clRoot)
         rvBoard = findViewById(R.id.rvBoard)
         tvNumMoves = findViewById(R.id.tvNumMoves)
         tvNumPairs = findViewById(R.id.tvNumPairs)
+
+        soundFlip = soundPool.load(this, R.raw.flip, 1)
+        soundWrong = soundPool.load(this, R.raw.error, 1)
+        soundMatched = soundPool.load(this, R.raw.pairmatch, 1)
+        soundCompliment = soundPool.load(this, R.raw.excellent, 1)
 
 
 
@@ -122,6 +139,18 @@ class MainActivity : AppCompatActivity() {
 
 
         setupBoard()
+    }
+
+    override fun onPause() {
+        super.onPause()
+        val intent = Intent(this, MusicService::class.java)
+        stopService(intent)
+    }
+
+    override fun onResume() {
+        super.onResume()
+        val intent = Intent(this, MusicService::class.java)
+        startService(intent)
     }
 
 
@@ -214,6 +243,7 @@ class MainActivity : AppCompatActivity() {
     private fun updateGameWithFlip(position: Int) {
         //Error checking
         if (isExpanded) shrinkFab()
+        soundPool.play(soundFlip, 1f, 1f, 1, 0, 1f)
         if (memoryGame.haveWonGame()) {
             //Alert the user for invalid move
             Snackbar.make(clRoot, "You have already won! Click on Plus icon and restart or edit the Game",Snackbar.LENGTH_LONG).show()
@@ -221,11 +251,13 @@ class MainActivity : AppCompatActivity() {
         }
         if (memoryGame.isCardFaceUp(position)) {
             //Alert the user of an invalid move
+            soundPool.play(soundWrong, 1f, 1f, 1, 0, 1f)
             Snackbar.make(clRoot, "Invalid move!",Snackbar.LENGTH_SHORT).show()
             return
         }
         //Actually flipping over the card
         if (memoryGame.flipCard(position)) {
+            soundPool.play(soundMatched, 1f, 1f, 1, 0, 1f)
             Log.i(TAG,"Found a match! Num pairs found: ${memoryGame.numPairsFound}")
 
             val color = ArgbEvaluator().evaluate(
@@ -238,6 +270,7 @@ class MainActivity : AppCompatActivity() {
             if (memoryGame.haveWonGame()) {
                 Toast.makeText(this, "Congratulations! You have won the Game",Toast.LENGTH_SHORT).show()
                 CommonConfetti.rainingConfetti(clRoot, intArrayOf(Color.YELLOW, Color.GREEN, Color.MAGENTA)).oneShot()
+                soundPool.play(soundCompliment, 1f, 1f, 1, 2, 1f)
 
             }
         }

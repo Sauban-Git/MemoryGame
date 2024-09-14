@@ -20,12 +20,12 @@
         "source": "/home/sauban/.gradle/daemon/8.7/com.sauban.mymemory.app-main-34:/drawable/ic_temple.xml"
     },
     {
-        "merged": "/home/sauban/.gradle/daemon/8.7/com.sauban.mymemory.app-debug-32:/drawable_ic_phone.xml.flat",
-        "source": "/home/sauban/.gradle/daemon/8.7/com.sauban.mymemory.app-main-34:/drawable/ic_phone.xml"
-    },
-    {
         "merged": "/home/sauban/.gradle/daemon/8.7/com.sauban.mymemory.app-debug-32:/mipmap-xhdpi_ic_launcher.webp.flat",
         "source": "/home/sauban/.gradle/daemon/8.7/com.sauban.mymemory.app-main-34:/mipmap-xhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "/home/sauban/.gradle/daemon/8.7/com.sauban.mymemory.app-debug-32:/drawable_ic_phone.xml.flat",
+        "source": "/home/sauban/.gradle/daemon/8.7/com.sauban.mymemory.app-main-34:/drawable/ic_phone.xml"
     },
     {
         "merged": "/home/sauban/.gradle/daemon/8.7/com.sauban.mymemory.app-debug-32:/mipmap-mdpi_ic_launcher_round.webp.flat",
@@ -50,6 +50,10 @@
     {
         "merged": "/home/sauban/.gradle/daemon/8.7/com.sauban.mymemory.app-debug-32:/mipmap-hdpi_ic_launcher_foreground.webp.flat",
         "source": "/home/sauban/.gradle/daemon/8.7/com.sauban.mymemory.app-main-34:/mipmap-hdpi/ic_launcher_foreground.webp"
+    },
+    {
+        "merged": "/home/sauban/.gradle/daemon/8.7/com.sauban.mymemory.app-debug-32:/raw_error.mp3.flat",
+        "source": "/home/sauban/.gradle/daemon/8.7/com.sauban.mymemory.app-main-34:/raw/error.mp3"
     },
     {
         "merged": "/home/sauban/.gradle/daemon/8.7/com.sauban.mymemory.app-debug-32:/layout_activity_main.xml.flat",
@@ -82,10 +86,6 @@
     {
         "merged": "/home/sauban/.gradle/daemon/8.7/com.sauban.mymemory.app-debug-32:/drawable_ic_bike.xml.flat",
         "source": "/home/sauban/.gradle/daemon/8.7/com.sauban.mymemory.app-main-34:/drawable/ic_bike.xml"
-    },
-    {
-        "merged": "com.sauban.mymemory.app-debug-32:/layout_activity_main.xml.flat",
-        "source": "com.sauban.mymemory.app-main-34:/layout/activity_main.xml"
     },
     {
         "merged": "/home/sauban/.gradle/daemon/8.7/com.sauban.mymemory.app-debug-32:/drawable_ic_skate.xml.flat",
@@ -156,6 +156,10 @@
         "source": "/home/sauban/.gradle/daemon/8.7/com.sauban.mymemory.app-main-34:/drawable/ic_thumbsup.xml"
     },
     {
+        "merged": "/home/sauban/.gradle/daemon/8.7/com.sauban.mymemory.app-debug-32:/raw_bgmusic.mp3.flat",
+        "source": "/home/sauban/.gradle/daemon/8.7/com.sauban.mymemory.app-main-34:/raw/bgmusic.mp3"
+    },
+    {
         "merged": "/home/sauban/.gradle/daemon/8.7/com.sauban.mymemory.app-debug-32:/drawable_ic_flower.xml.flat",
         "source": "/home/sauban/.gradle/daemon/8.7/com.sauban.mymemory.app-main-34:/drawable/ic_flower.xml"
     },
@@ -184,6 +188,10 @@
         "source": "/home/sauban/.gradle/daemon/8.7/com.sauban.mymemory.app-main-34:/drawable/ic_edit.xml"
     },
     {
+        "merged": "com.sauban.mymemory.app-debug-32:/raw_excellent.mp3.flat",
+        "source": "com.sauban.mymemory.app-main-34:/raw/excellent.mp3"
+    },
+    {
         "merged": "/home/sauban/.gradle/daemon/8.7/com.sauban.mymemory.app-debug-32:/mipmap-hdpi_ic_launcher_round.webp.flat",
         "source": "/home/sauban/.gradle/daemon/8.7/com.sauban.mymemory.app-main-34:/mipmap-hdpi/ic_launcher_round.webp"
     },
@@ -198,6 +206,10 @@
     {
         "merged": "/home/sauban/.gradle/daemon/8.7/com.sauban.mymemory.app-debug-32:/drawable_ic_back.xml.flat",
         "source": "/home/sauban/.gradle/daemon/8.7/com.sauban.mymemory.app-main-34:/drawable/ic_back.xml"
+    },
+    {
+        "merged": "/home/sauban/.gradle/daemon/8.7/com.sauban.mymemory.app-debug-32:/raw_flip.mp3.flat",
+        "source": "/home/sauban/.gradle/daemon/8.7/com.sauban.mymemory.app-main-34:/raw/flip.mp3"
     },
     {
         "merged": "/home/sauban/.gradle/daemon/8.7/com.sauban.mymemory.app-debug-32:/anim_to_top_anim.xml.flat",
@@ -242,5 +254,9 @@
     {
         "merged": "/home/sauban/.gradle/daemon/8.7/com.sauban.mymemory.app-debug-32:/anim_rotate_clock_wise.xml.flat",
         "source": "/home/sauban/.gradle/daemon/8.7/com.sauban.mymemory.app-main-34:/anim/rotate_clock_wise.xml"
+    },
+    {
+        "merged": "/home/sauban/.gradle/daemon/8.7/com.sauban.mymemory.app-debug-32:/raw_pairmatch.mp3.flat",
+        "source": "/home/sauban/.gradle/daemon/8.7/com.sauban.mymemory.app-main-34:/raw/pairmatch.mp3"
     }
 ]

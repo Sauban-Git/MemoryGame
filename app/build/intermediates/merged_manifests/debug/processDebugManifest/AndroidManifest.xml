@@ -38,6 +38,11 @@
             </intent-filter>
         </activity>
 
+        <service
+            android:name="com.sauban.mymemory.utils.MusicService"
+            android:enabled="true"
+            android:exported="false" />
+
         <provider
             android:name="androidx.startup.InitializationProvider"
             android:authorities="com.sauban.mymemory.androidx-startup"
