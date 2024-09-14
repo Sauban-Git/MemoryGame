@@ -270,7 +270,7 @@ class MainActivity : AppCompatActivity() {
             if (memoryGame.haveWonGame()) {
                 Toast.makeText(this, "Congratulations! You have won the Game",Toast.LENGTH_SHORT).show()
                 CommonConfetti.rainingConfetti(clRoot, intArrayOf(Color.YELLOW, Color.GREEN, Color.MAGENTA)).oneShot()
-                soundPool.play(soundCompliment, 1f, 1f, 1, 2, 1f)
+                soundPool.play(soundCompliment, 1f, 1f, 1, 0, 1f)
 
             }
         }
