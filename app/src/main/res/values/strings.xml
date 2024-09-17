@@ -1,4 +1,4 @@
 <resources>
-    <string name="app_name">My Memory</string>
+    <string name="app_name">MemoryGame</string>
     <string name="imagebutton">flip the cards</string>
 </resources>
