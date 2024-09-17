@@ -220,12 +220,12 @@ class MainActivity : AppCompatActivity() {
         rvBoard.adapter = adapter
         rvBoard.setHasFixedSize(true)
         rvBoard.layoutManager = GridLayoutManager(this,boardSize.getWidth())
-
-        showAllCardsTemporarily()
+        val cardTime: Int = 1000 * boardSize.getWidth()
+        showAllCardsTemporarily(cardTime)
     }
 
     @SuppressLint("NotifyDataSetChanged")
-    private fun showAllCardsTemporarily() {
+    private fun showAllCardsTemporarily(cardTime: Int) {
         for (i in 0 until memoryGame.cards.size) {
             memoryGame.cards[i].isFaceUp = true
         }
@@ -236,7 +236,7 @@ class MainActivity : AppCompatActivity() {
                 memoryGame.cards[i].isFaceUp = false
             }
             adapter.notifyDataSetChanged()
-        },2000)
+        },cardTime.toLong())
     }
 
     @SuppressLint("SetTextI18n", "NotifyDataSetChanged")
