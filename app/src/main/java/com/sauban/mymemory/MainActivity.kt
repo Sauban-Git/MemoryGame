@@ -292,8 +292,7 @@ class MainActivity : AppCompatActivity() {
                             _, _ -> setupBoard()
                     }
                     .setPositiveButton("Change Level") {
-                            _, _ ->
-                        changeLevel()
+                            _, _ -> changeLevel()
                     }.show()
             }
         }
