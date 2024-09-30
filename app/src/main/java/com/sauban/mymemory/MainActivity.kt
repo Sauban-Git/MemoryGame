@@ -249,14 +249,6 @@ class MainActivity : AppCompatActivity() {
             //Alert the user for invalid move
             Snackbar.make(clRoot, "You have already won! Click on Plus icon and restart or edit the Game",Snackbar.LENGTH_LONG).show()
             return
-        }else if (memoryGame.getNumMoves() > checkMoves) {
-            Toast.makeText(this, "Game over! Try again.",Toast.LENGTH_LONG).show()
-            AlertDialog.Builder(this)
-                .setTitle("Game Over!")
-                .setMessage("Game Over! Try again.")
-                .setPositiveButton("Restart") {
-                    _, _ -> setupBoard()
-                }.show()
         }
         if (memoryGame.isCardFaceUp(position)) {
             //Alert the user of an invalid move
@@ -283,7 +275,17 @@ class MainActivity : AppCompatActivity() {
 
             }
         }
-        tvNumMoves.text = "Move: ${memoryGame.getNumMoves()}"
+        if (memoryGame.getNumMoves() >= checkMoves) {
+            Toast.makeText(this, "Game over! Try again.",Toast.LENGTH_LONG).show()
+            AlertDialog.Builder(this)
+                .setTitle("Game Over!")
+                .setMessage("Game Over! Try again.")
+                .setCancelable(false)
+                .setPositiveButton("Restart") {
+                        _, _ -> setupBoard()
+                }.show()
+        }
+        tvNumMoves.text = "Move: ${memoryGame.getNumMoves()} / $checkMoves"
         adapter.notifyDataSetChanged()
     }
 
