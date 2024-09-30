@@ -1,6 +1,5 @@
 package com.sauban.mymemory
 
-import android.animation.ArgbEvaluator
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.graphics.Color
@@ -17,7 +16,6 @@ import android.view.animation.AnimationUtils
 import android.widget.RadioGroup
 import android.widget.TextView
 import android.widget.Toast
-import android.window.OnBackInvokedDispatcher
 import androidx.appcompat.app.AlertDialog
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
@@ -36,7 +34,7 @@ class MainActivity : AppCompatActivity() {
 
     companion object{
         private const val TAG = "MainActivity"
-        private const val CREATE_REQUEST_CODE = 814155
+//        private const val CREATE_REQUEST_CODE = 814155
     }
 
     private val soundPool by lazy {
@@ -105,23 +103,27 @@ class MainActivity : AppCompatActivity() {
                 expandFab()
             }
         }
-        binding.editBtn.setOnClickListener(View.OnClickListener {
-            if (isExpanded) {shrinkFab()}
+        binding.editBtn.setOnClickListener {
+            if (isExpanded) {
+                shrinkFab()
+            }
             changeLevel()
-        })
+        }
 
-        binding.refreshBtn.setOnClickListener(View.OnClickListener {
-            if (memoryGame.getNumMoves() > 0 && !memoryGame.haveWonGame() ) {
-                showAlertDialog("Do you want to quit your progress?", null, View.OnClickListener {
-                    Toast.makeText(this, "Game refreshed!",Toast.LENGTH_SHORT).show()
+        binding.refreshBtn.setOnClickListener {
+            if (memoryGame.getNumMoves() > 0 && !memoryGame.haveWonGame()) {
+                showAlertDialog("Do you want to quit your progress?", null) {
+                    Toast.makeText(this, "Game refreshed!", Toast.LENGTH_SHORT).show()
                     setupBoard()
-                })
-            }else {
-                Toast.makeText(this, "Game refreshed!",Toast.LENGTH_SHORT).show()
+                }
+            } else {
+                Toast.makeText(this, "Game refreshed!", Toast.LENGTH_SHORT).show()
                 setupBoard()
             }
-            if (isExpanded) {shrinkFab()}
-        })
+            if (isExpanded) {
+                shrinkFab()
+            }
+        }
 
 
         setupBoard()
@@ -135,7 +137,7 @@ class MainActivity : AppCompatActivity() {
             BoardSize.MEDIUM -> radioGroupSize.check(R.id.rbMedium)
             BoardSize.HARD -> radioGroupSize.check(R.id.rbHard)
         }
-        showAlertDialog("Choose new level", boardSizeView, View.OnClickListener {
+        showAlertDialog("Choose new level", boardSizeView) {
             // Set a new value for the board size
             boardSize = when (radioGroupSize.checkedRadioButtonId) {
                 R.id.rbEasy -> BoardSize.EASY
@@ -144,7 +146,7 @@ class MainActivity : AppCompatActivity() {
             }
             setupBoard()
 
-        })
+        }
     }
 
     override fun onPause() {
@@ -272,12 +274,6 @@ class MainActivity : AppCompatActivity() {
             soundPool.play(soundMatched, 1f, 1f, 1, 0, 1f)
             Log.i(TAG,"Found a match! Num pairs found: ${memoryGame.numPairsFound}")
 
-            val colorPair = ArgbEvaluator().evaluate(
-                memoryGame.numPairsFound.toFloat() / boardSize.getNumPairs(),
-                ContextCompat.getColor(this, R.color.color_progress_none),
-                ContextCompat.getColor(this, R.color.color_progress_full)
-            ) as Int
-            tvNumPairs.setTextColor(colorPair)
             tvNumPairs.text = "Pairs: ${memoryGame.numPairsFound} / ${boardSize.getNumPairs()}"
 
 
@@ -297,12 +293,6 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        val colorMove = ArgbEvaluator().evaluate(
-            memoryGame.numPairsFound.toFloat() / checkMoves,
-            ContextCompat.getColor(this, R.color.color_progress_full),
-            ContextCompat.getColor(this, R.color.color_progress_none)
-        ) as Int
-        tvNumMoves.setTextColor(colorMove)
         tvNumMoves.text = "Move: ${memoryGame.getNumMoves()} / $checkMoves"
 
 //        For extra moves or game over
