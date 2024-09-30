@@ -251,7 +251,12 @@ class MainActivity : AppCompatActivity() {
             return
         }else if (memoryGame.getNumMoves() > checkMoves) {
             Toast.makeText(this, "Game over! Try again.",Toast.LENGTH_LONG).show()
-            setupBoard()
+            AlertDialog.Builder(this)
+                .setTitle("Game Over!")
+                .setMessage("Game Over! Try again.")
+                .setPositiveButton("Restart") {
+                    _, _ -> setupBoard()
+                }.show()
         }
         if (memoryGame.isCardFaceUp(position)) {
             //Alert the user of an invalid move
