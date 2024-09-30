@@ -241,6 +241,7 @@ class MainActivity : AppCompatActivity() {
 
     @SuppressLint("SetTextI18n", "NotifyDataSetChanged")
     private fun updateGameWithFlip(position: Int) {
+        val checkMoves = boardSize.getNumPairs() + (boardSize.getNumPairs() / 2)
         //Error checking
         if (isExpanded) shrinkFab()
         soundPool.play(soundFlip, 1f, 1f, 1, 0, 1f)
@@ -248,6 +249,9 @@ class MainActivity : AppCompatActivity() {
             //Alert the user for invalid move
             Snackbar.make(clRoot, "You have already won! Click on Plus icon and restart or edit the Game",Snackbar.LENGTH_LONG).show()
             return
+        }else if (memoryGame.getNumMoves() > checkMoves) {
+            Toast.makeText(this, "Game over! Try again.",Toast.LENGTH_LONG).show()
+            setupBoard()
         }
         if (memoryGame.isCardFaceUp(position)) {
             //Alert the user of an invalid move
@@ -267,15 +271,11 @@ class MainActivity : AppCompatActivity() {
             ) as Int
             tvNumPairs.setTextColor(color)
             tvNumPairs.text = "Pairs: ${memoryGame.numPairsFound} / ${boardSize.getNumPairs()}"
-            val checkMoves = boardSize.getNumPairs() + (boardSize.getNumPairs() / 2)
             if (memoryGame.haveWonGame()) {
                 Toast.makeText(this, "Congratulations! You have won the Game",Toast.LENGTH_SHORT).show()
                 CommonConfetti.rainingConfetti(clRoot, intArrayOf(Color.YELLOW, Color.GREEN, Color.MAGENTA)).oneShot()
                 soundPool.play(soundCompliment, 1f, 1f, 1, 0, 1f)
 
-            }else if (memoryGame.getNumMoves() > checkMoves) {
-                Toast.makeText(this, "Game over! Try again.",Toast.LENGTH_LONG).show()
-                setupBoard()
             }
         }
         tvNumMoves.text = "Move: ${memoryGame.getNumMoves()}"
