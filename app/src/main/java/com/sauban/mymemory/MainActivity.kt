@@ -267,11 +267,15 @@ class MainActivity : AppCompatActivity() {
             ) as Int
             tvNumPairs.setTextColor(color)
             tvNumPairs.text = "Pairs: ${memoryGame.numPairsFound} / ${boardSize.getNumPairs()}"
+            val checkMoves = boardSize.getNumPairs() + (boardSize.getNumPairs() / 2)
             if (memoryGame.haveWonGame()) {
                 Toast.makeText(this, "Congratulations! You have won the Game",Toast.LENGTH_SHORT).show()
                 CommonConfetti.rainingConfetti(clRoot, intArrayOf(Color.YELLOW, Color.GREEN, Color.MAGENTA)).oneShot()
                 soundPool.play(soundCompliment, 1f, 1f, 1, 0, 1f)
 
+            }else if (memoryGame.getNumMoves() > checkMoves) {
+                Toast.makeText(this, "Game over! Try again.",Toast.LENGTH_LONG).show()
+                setupBoard()
             }
         }
         tvNumMoves.text = "Move: ${memoryGame.getNumMoves()}"
