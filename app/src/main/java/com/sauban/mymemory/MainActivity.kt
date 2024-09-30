@@ -307,7 +307,7 @@ class MainActivity : AppCompatActivity() {
 
 //        For extra moves or game over
         if (memoryGame.getNumMoves() >= checkMoves && !extraMoveUsed) {
-            Toast.makeText(this, "Game over! Try again.",Toast.LENGTH_LONG).show()
+            Toast.makeText(this, "Out of Move!",Toast.LENGTH_SHORT).show()
             AlertDialog.Builder(this)
                 .setTitle("Out of Moves!")
                 .setMessage("You're out of Moves! Would you like to try again with extra moves?")
