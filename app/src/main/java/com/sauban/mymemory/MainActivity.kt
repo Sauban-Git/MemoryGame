@@ -129,8 +129,9 @@ class MainActivity : AppCompatActivity() {
         setupBoard()
     }
 
+    @SuppressLint("InflateParams")
     private fun changeLevel() {
-        val boardSizeView = LayoutInflater.from(this).inflate(R.layout.dialog_board_size, null)
+        val boardSizeView = LayoutInflater.from(this).inflate(R.layout.dialog_board_size, null, false)
         val radioGroupSize  = boardSizeView.findViewById<RadioGroup>(R.id.radioGroup)
         when (boardSize) {
             BoardSize.EASY -> radioGroupSize.check(R.id.rbEasy)
