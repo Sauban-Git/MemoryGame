@@ -261,6 +261,29 @@ class MainActivity : AppCompatActivity() {
             //Alert the user for invalid move
             Snackbar.make(clRoot, "You have already won! Click on Plus icon and restart or edit the Game",Snackbar.LENGTH_LONG).show()
             return
+        }else if (memoryGame.getNumMoves() >= checkMoves && !extraMoveUsed) {
+            AlertDialog.Builder(this)
+                .setTitle("Out of Moves!")
+                .setMessage("You're out of Moves! Would you like to try again with extra moves?")
+                .setCancelable(false)
+                .setNegativeButton("No") {
+                        _, _ -> setupBoard()
+                }
+                .setPositiveButton("Yes") {
+                        _, _ ->
+                    checkMoves += (boardSize.getNumPairs() / 2)
+                    extraMoveUsed = true
+                    Toast.makeText(this, "You got extra moves!",Toast.LENGTH_SHORT).show()
+                }.show()
+        }else if (memoryGame.getNumMoves() >= checkMoves && extraMoveUsed) {
+            Toast.makeText(this, "Game over! Try again.",Toast.LENGTH_LONG).show()
+            AlertDialog.Builder(this)
+                .setTitle("Game Over!")
+                .setMessage("You are out of Moves! Try Again.")
+                .setCancelable(false)
+                .setPositiveButton("Restart") {
+                        _, _ -> setupBoard()
+                }.show()
         }
 
 
@@ -295,34 +318,6 @@ class MainActivity : AppCompatActivity() {
         }
 
         tvNumMoves.text = "Move: ${memoryGame.getNumMoves()} / $checkMoves"
-
-//        For extra moves or game over
-        if (memoryGame.getNumMoves() >= checkMoves && !extraMoveUsed) {
-            AlertDialog.Builder(this)
-                .setTitle("Out of Moves!")
-                .setMessage("You're out of Moves! Would you like to try again with extra moves?")
-                .setCancelable(false)
-                .setNegativeButton("No") {
-                    _, _ -> setupBoard()
-                }
-                .setPositiveButton("Yes") {
-                        _, _ ->
-                    checkMoves += (boardSize.getNumPairs() / 2)
-                    extraMoveUsed = true
-                    Toast.makeText(this, "You got extra moves!",Toast.LENGTH_SHORT).show()
-                }.show()
-        }else if (memoryGame.getNumMoves() >= checkMoves && extraMoveUsed) {
-            Toast.makeText(this, "Game over! Try again.",Toast.LENGTH_LONG).show()
-            AlertDialog.Builder(this)
-                .setTitle("Game Over!")
-                .setMessage("You are out of Moves! Try Again.")
-                .setCancelable(false)
-                .setPositiveButton("Restart") {
-                        _, _ -> setupBoard()
-                }.show()
-        }
-
-
         adapter.notifyDataSetChanged()
     }
 
