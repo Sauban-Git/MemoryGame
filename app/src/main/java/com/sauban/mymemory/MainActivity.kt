@@ -72,6 +72,7 @@ class MainActivity : AppCompatActivity() {
     private var soundWrong: Int = 0
     private var soundMatched: Int = 0
     private var soundCompliment: Int = 0
+    private var extraMoveUsed: Boolean = false
 
 
 
@@ -105,23 +106,7 @@ class MainActivity : AppCompatActivity() {
         }
         binding.editBtn.setOnClickListener(View.OnClickListener {
             if (isExpanded) {shrinkFab()}
-            val boardSizeView = LayoutInflater.from(this).inflate(R.layout.dialog_board_size, null)
-            val radioGroupSize  = boardSizeView.findViewById<RadioGroup>(R.id.radioGroup)
-            when (boardSize) {
-                BoardSize.EASY -> radioGroupSize.check(R.id.rbEasy)
-                BoardSize.MEDIUM -> radioGroupSize.check(R.id.rbMedium)
-                BoardSize.HARD -> radioGroupSize.check(R.id.rbHard)
-            }
-            showAlertDialog("Choose new level", boardSizeView, View.OnClickListener {
-                // Set a new value for the board size
-                boardSize = when (radioGroupSize.checkedRadioButtonId) {
-                    R.id.rbEasy -> BoardSize.EASY
-                    R.id.rbMedium -> BoardSize.MEDIUM
-                    else -> BoardSize.HARD
-                }
-                setupBoard()
-
-            })
+            changeLevel()
         })
 
         binding.refreshBtn.setOnClickListener(View.OnClickListener {
@@ -139,6 +124,26 @@ class MainActivity : AppCompatActivity() {
 
 
         setupBoard()
+    }
+
+    private fun changeLevel() {
+        val boardSizeView = LayoutInflater.from(this).inflate(R.layout.dialog_board_size, null)
+        val radioGroupSize  = boardSizeView.findViewById<RadioGroup>(R.id.radioGroup)
+        when (boardSize) {
+            BoardSize.EASY -> radioGroupSize.check(R.id.rbEasy)
+            BoardSize.MEDIUM -> radioGroupSize.check(R.id.rbMedium)
+            BoardSize.HARD -> radioGroupSize.check(R.id.rbHard)
+        }
+        showAlertDialog("Choose new level", boardSizeView, View.OnClickListener {
+            // Set a new value for the board size
+            boardSize = when (radioGroupSize.checkedRadioButtonId) {
+                R.id.rbEasy -> BoardSize.EASY
+                R.id.rbMedium -> BoardSize.MEDIUM
+                else -> BoardSize.HARD
+            }
+            setupBoard()
+
+        })
     }
 
     override fun onPause() {
@@ -241,15 +246,20 @@ class MainActivity : AppCompatActivity() {
 
     @SuppressLint("SetTextI18n", "NotifyDataSetChanged")
     private fun updateGameWithFlip(position: Int) {
-        val checkMoves = boardSize.getNumPairs() + (boardSize.getNumPairs() / 2)
+        var checkMoves = boardSize.getNumPairs() + (boardSize.getNumPairs() / 2)
+
         //Error checking
         if (isExpanded) shrinkFab()
         soundPool.play(soundFlip, 1f, 1f, 1, 0, 1f)
+
+
         if (memoryGame.haveWonGame()) {
             //Alert the user for invalid move
             Snackbar.make(clRoot, "You have already won! Click on Plus icon and restart or edit the Game",Snackbar.LENGTH_LONG).show()
             return
         }
+
+
         if (memoryGame.isCardFaceUp(position)) {
             //Alert the user of an invalid move
             soundPool.play(soundWrong, 1f, 1f, 1, 0, 1f)
@@ -261,31 +271,68 @@ class MainActivity : AppCompatActivity() {
             soundPool.play(soundMatched, 1f, 1f, 1, 0, 1f)
             Log.i(TAG,"Found a match! Num pairs found: ${memoryGame.numPairsFound}")
 
-            val color = ArgbEvaluator().evaluate(
+            val colorPair = ArgbEvaluator().evaluate(
                 memoryGame.numPairsFound.toFloat() / boardSize.getNumPairs(),
                 ContextCompat.getColor(this, R.color.color_progress_none),
                 ContextCompat.getColor(this, R.color.color_progress_full)
             ) as Int
-            tvNumPairs.setTextColor(color)
+            tvNumPairs.setTextColor(colorPair)
             tvNumPairs.text = "Pairs: ${memoryGame.numPairsFound} / ${boardSize.getNumPairs()}"
+
+
             if (memoryGame.haveWonGame()) {
                 Toast.makeText(this, "Congratulations! You have won the Game",Toast.LENGTH_SHORT).show()
                 CommonConfetti.rainingConfetti(clRoot, intArrayOf(Color.YELLOW, Color.GREEN, Color.MAGENTA)).oneShot()
                 soundPool.play(soundCompliment, 1f, 1f, 1, 0, 1f)
-
+                AlertDialog.Builder(this)
+                    .setTitle("Game Won!")
+                    .setMessage("Congratulations! You won the Game! Would you like to change the level or replay?")
+                    .setNegativeButton("Replay") {
+                            _, _ -> setupBoard()
+                    }
+                    .setPositiveButton("Change Level") {
+                            _, _ ->
+                        changeLevel()
+                    }.show()
             }
         }
-        if (memoryGame.getNumMoves() >= checkMoves) {
+
+        val colorMove = ArgbEvaluator().evaluate(
+            memoryGame.numPairsFound.toFloat() / checkMoves,
+            ContextCompat.getColor(this, R.color.color_progress_full),
+            ContextCompat.getColor(this, R.color.color_progress_none)
+        ) as Int
+        tvNumMoves.setTextColor(colorMove)
+        tvNumMoves.text = "Move: ${memoryGame.getNumMoves()} / $checkMoves"
+
+//        For extra moves or game over
+        if (memoryGame.getNumMoves() >= checkMoves && !extraMoveUsed) {
+            Toast.makeText(this, "Game over! Try again.",Toast.LENGTH_LONG).show()
+            AlertDialog.Builder(this)
+                .setTitle("Out of Moves!")
+                .setMessage("You're out of Moves! Would you like to try again with extra moves?")
+                .setCancelable(false)
+                .setNegativeButton("No") {
+                    _, _ -> setupBoard()
+                }
+                .setPositiveButton("Yes") {
+                        _, _ ->
+                    checkMoves += (boardSize.getNumPairs() / 2)
+                    extraMoveUsed = true
+                    Toast.makeText(this, "You got extra moves!",Toast.LENGTH_SHORT).show()
+                }.show()
+        }else if (memoryGame.getNumMoves() >= checkMoves && extraMoveUsed) {
             Toast.makeText(this, "Game over! Try again.",Toast.LENGTH_LONG).show()
             AlertDialog.Builder(this)
                 .setTitle("Game Over!")
-                .setMessage("Game Over! Try again.")
+                .setMessage("You are out of Moves! Try Again.")
                 .setCancelable(false)
                 .setPositiveButton("Restart") {
                         _, _ -> setupBoard()
                 }.show()
         }
-        tvNumMoves.text = "Move: ${memoryGame.getNumMoves()} / $checkMoves"
+
+
         adapter.notifyDataSetChanged()
     }
 
