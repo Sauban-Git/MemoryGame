@@ -73,6 +73,7 @@ class MainActivity : AppCompatActivity() {
     private var soundMatched: Int = 0
     private var soundCompliment: Int = 0
     private var extraMoveUsed: Boolean = false
+    private var checkMoves: Int = 0
 
 
 
@@ -200,6 +201,8 @@ class MainActivity : AppCompatActivity() {
 
     @SuppressLint("SetTextI18n")
     private fun setupBoard() {
+        extraMoveUsed = false
+        checkMoves = boardSize.getNumPairs() + (boardSize.getNumPairs() / 2)
         when (boardSize) {
             BoardSize.EASY -> {
                 tvNumMoves.text = "EASY: 4 x 2"
@@ -246,8 +249,6 @@ class MainActivity : AppCompatActivity() {
 
     @SuppressLint("SetTextI18n", "NotifyDataSetChanged")
     private fun updateGameWithFlip(position: Int) {
-        var checkMoves = boardSize.getNumPairs() + (boardSize.getNumPairs() / 2)
-
         //Error checking
         if (isExpanded) shrinkFab()
         soundPool.play(soundFlip, 1f, 1f, 1, 0, 1f)
