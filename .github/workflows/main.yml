@@ -1,6 +1,8 @@
-name: MemoryGame Build
+name: MemoryGame Test Build
 on:
-  workflow_dispatch:
+  push:
+    branches:
+      - test
 jobs:
   build:
     runs-on: ubuntu-latest
