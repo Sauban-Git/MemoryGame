@@ -18,14 +18,14 @@ android {
     namespace = "com.sauban.mymemory"
     compileSdk = 34
 
-    signingConfigs {
-        create("release") {
-            storeFile = file(keystoreProperties["storeFile"] ?: "")
-            storePassword = keystoreProperties["storePassword"]?.toString() ?: ""
-            keyAlias = keystoreProperties["keyAlias"]?.toString() ?: ""
-            keyPassword = keystoreProperties["keyPassword"]?.toString() ?: ""
-        }
-    }
+//    signingConfigs {
+//        create("release") {
+//            storeFile = file(keystoreProperties["storeFile"] ?: "")
+//            storePassword = keystoreProperties["storePassword"]?.toString() ?: ""
+//            keyAlias = keystoreProperties["keyAlias"]?.toString() ?: ""
+//            keyPassword = keystoreProperties["keyPassword"]?.toString() ?: ""
+//        }
+//    }
 
     defaultConfig {
         applicationId = "com.sauban.mymemory"
@@ -39,7 +39,7 @@ android {
 
     buildTypes {
         release {
-            signingConfig = signingConfigs.getByName("release")
+//            signingConfig = signingConfigs.getByName("release")
             isMinifyEnabled = true
             isShrinkResources = true
             proguardFiles(
