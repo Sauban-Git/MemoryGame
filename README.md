@@ -49,4 +49,4 @@ A special thanks to the Android community for their support and resources that m
 
 ## Contact
 
-For any questions or feedback, feel free to contact me at [Telegram](https://t.me/GrOoT_7s).
+For any questions or feedback, feel free to mail me at [Email](sauban.ind@gmail.com).
