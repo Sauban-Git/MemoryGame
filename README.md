@@ -56,6 +56,6 @@ This project is licensed under the Apache License. See the [LICENSE](LICENSE) fi
 
 A special thanks to the Android community for their support and resources that made this project possible. Your contributions and tools have been invaluable!
 
-## Contact
+### Contact
 
 For any questions or feedback, feel free to mail me at [Email](mailto:sauban.ind@gmail.com).
