@@ -52,6 +52,7 @@ id llRoot
 id menuBtn
 id radioGroup
 id rbEasy
+id rbExtreme
 id rbHard
 id rbMedium
 id refreshBtn

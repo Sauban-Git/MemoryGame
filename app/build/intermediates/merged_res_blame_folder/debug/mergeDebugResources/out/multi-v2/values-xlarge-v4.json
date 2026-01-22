@@ -4,7 +4,7 @@
             "outputFile": "com.sauban.mymemory.app-mergeDebugResources-30:/values-xlarge-v4/values-xlarge-v4.xml",
             "map": [
                 {
-                    "source": "/home/sauban/.gradle/caches/transforms-4/8caa7d5899fd6c34438848084afd03c5/transformed/appcompat-1.7.0/res/values-xlarge-v4/values-xlarge-v4.xml",
+                    "source": "/home/blue/.gradle/caches/transforms-4/2fc8998759e61697148965a2b76ee8c8/transformed/appcompat-1.7.0/res/values-xlarge-v4/values-xlarge-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7",
                         "startColumns": "4,4,4,4,4,4",

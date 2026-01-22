@@ -10,8 +10,8 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
-        android:layout_width="120dp"
-        android:layout_height="120dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         app:cardCornerRadius="10dp"
         app:cardElevation="10dp"
         android:background="@color/card_color">
@@ -22,7 +22,8 @@
             android:layout_height="match_parent"
             android:background="@color/card_color"
             android:contentDescription="@string/imagebutton"
-            android:scaleType="centerCrop"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
             android:src="@color/card_color"
             tools:src="@color/card_color" />
     </androidx.cardview.widget.CardView>

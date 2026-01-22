@@ -17,6 +17,7 @@ import android.widget.RadioGroup
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
+import androidx.cardview.widget.CardView
 import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.GridLayoutManager
@@ -137,13 +138,15 @@ class MainActivity : AppCompatActivity() {
             BoardSize.EASY -> radioGroupSize.check(R.id.rbEasy)
             BoardSize.MEDIUM -> radioGroupSize.check(R.id.rbMedium)
             BoardSize.HARD -> radioGroupSize.check(R.id.rbHard)
+            BoardSize.EXTREME -> radioGroupSize.check(R.id.rbExtreme)
         }
         showAlertDialog("Choose new level", boardSizeView) {
             // Set a new value for the board size
             boardSize = when (radioGroupSize.checkedRadioButtonId) {
                 R.id.rbEasy -> BoardSize.EASY
                 R.id.rbMedium -> BoardSize.MEDIUM
-                else -> BoardSize.HARD
+                R.id.rbHard -> BoardSize.HARD
+                else -> BoardSize.EXTREME
             }
             setupBoard()
 
@@ -212,14 +215,20 @@ class MainActivity : AppCompatActivity() {
                 tvNumPairs.text = "Pairs: 0 / 4"
             }
             BoardSize.MEDIUM -> {
-                tvNumMoves.text = "MEDIUM: 8 x 3"
-                tvNumPairs.text = "Pairs: 0 / 12"
+                tvNumMoves.text = "MEDIUM: 4 x 3"
+                tvNumPairs.text = "Pairs: 0 / 6"
             }
             BoardSize.HARD -> {
-                tvNumMoves.text = "HARD: 8 x 4"
+                tvNumMoves.text = "HARD: 8 x 3"
+                tvNumPairs.text = "Pairs: 0 / 12"
+            }
+
+            BoardSize.EXTREME -> {
+                tvNumMoves.text = "Extreme: 8 x 4"
                 tvNumPairs.text = "Pairs: 0 / 16"
             }
         }
+
         tvNumPairs.setTextColor(ContextCompat.getColor(this, R.color.color_progress_none))
         memoryGame = MemoryGame(boardSize)
         adapter = MemoryBoardAdaptor(this, boardSize, memoryGame.cards,object: MemoryBoardAdaptor.CardClickListener{
@@ -231,7 +240,7 @@ class MainActivity : AppCompatActivity() {
         rvBoard.adapter = adapter
         rvBoard.setHasFixedSize(true)
         rvBoard.layoutManager = GridLayoutManager(this,boardSize.getWidth())
-        val cardTime: Int = 1000 * boardSize.getWidth()
+        val cardTime: Int = 1000 * boardSize.getHeight() / 2
         showAllCardsTemporarily(cardTime)
     }
 

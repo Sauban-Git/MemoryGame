@@ -31,15 +31,18 @@
             android:id="@+id/rbMedium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Medium (8 x 3)" />
+            android:text="Medium (4 x 3)" />
 
         <RadioButton
             android:id="@+id/rbHard"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hard (8 x 4)"
-            tools:layout_editor_absoluteX="22dp"
-            tools:layout_editor_absoluteY="240dp" />
+            android:text="Hard (8 x 3)" />
+        <RadioButton
+            android:id="@+id/rbExtreme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Extreme (8 x 4)" />
     </RadioGroup>
 
 

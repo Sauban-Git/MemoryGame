@@ -27,16 +27,21 @@ public final class DialogBoardSizeBinding implements ViewBinding {
   public final RadioButton rbEasy;
 
   @NonNull
+  public final RadioButton rbExtreme;
+
+  @NonNull
   public final RadioButton rbHard;
 
   @NonNull
   public final RadioButton rbMedium;
 
   private DialogBoardSizeBinding(@NonNull ConstraintLayout rootView, @NonNull RadioGroup radioGroup,
-      @NonNull RadioButton rbEasy, @NonNull RadioButton rbHard, @NonNull RadioButton rbMedium) {
+      @NonNull RadioButton rbEasy, @NonNull RadioButton rbExtreme, @NonNull RadioButton rbHard,
+      @NonNull RadioButton rbMedium) {
     this.rootView = rootView;
     this.radioGroup = radioGroup;
     this.rbEasy = rbEasy;
+    this.rbExtreme = rbExtreme;
     this.rbHard = rbHard;
     this.rbMedium = rbMedium;
   }
@@ -80,6 +85,12 @@ public final class DialogBoardSizeBinding implements ViewBinding {
         break missingId;
       }
 
+      id = R.id.rbExtreme;
+      RadioButton rbExtreme = ViewBindings.findChildViewById(rootView, id);
+      if (rbExtreme == null) {
+        break missingId;
+      }
+
       id = R.id.rbHard;
       RadioButton rbHard = ViewBindings.findChildViewById(rootView, id);
       if (rbHard == null) {
@@ -92,8 +103,8 @@ public final class DialogBoardSizeBinding implements ViewBinding {
         break missingId;
       }
 
-      return new DialogBoardSizeBinding((ConstraintLayout) rootView, radioGroup, rbEasy, rbHard,
-          rbMedium);
+      return new DialogBoardSizeBinding((ConstraintLayout) rootView, radioGroup, rbEasy, rbExtreme,
+          rbHard, rbMedium);
     }
     String missingId = rootView.getResources().getResourceName(id);
     throw new NullPointerException("Missing required view with ID: ".concat(missingId));

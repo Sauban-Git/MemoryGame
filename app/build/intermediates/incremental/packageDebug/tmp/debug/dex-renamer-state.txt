@@ -1,10 +1,10 @@
-#Sat Sep 14 22:11:16 IST 2024
-base.0=/home/sauban/Documents/GitHub/MemoryGame/app/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex
-base.1=/home/sauban/Documents/GitHub/MemoryGame/app/build/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex
-base.2=/home/sauban/Documents/GitHub/MemoryGame/app/build/intermediates/dex/debug/mergeProjectDexDebug/1/classes.dex
-base.3=/home/sauban/Documents/GitHub/MemoryGame/app/build/intermediates/dex/debug/mergeProjectDexDebug/10/classes.dex
-base.4=/home/sauban/Documents/GitHub/MemoryGame/app/build/intermediates/dex/debug/mergeProjectDexDebug/4/classes.dex
-base.5=/home/sauban/Documents/GitHub/MemoryGame/app/build/intermediates/dex/debug/mergeProjectDexDebug/7/classes.dex
+#Thu Jan 22 17:31:50 IST 2026
+base.0=/home/blue/Documents/github/MemoryGame/app/build/intermediates/dex/debug/mergeExtDexDebug/classes.dex
+base.1=/home/blue/Documents/github/MemoryGame/app/build/intermediates/dex/debug/mergeProjectDexDebug/0/classes.dex
+base.2=/home/blue/Documents/github/MemoryGame/app/build/intermediates/dex/debug/mergeProjectDexDebug/1/classes.dex
+base.3=/home/blue/Documents/github/MemoryGame/app/build/intermediates/dex/debug/mergeProjectDexDebug/10/classes.dex
+base.4=/home/blue/Documents/github/MemoryGame/app/build/intermediates/dex/debug/mergeProjectDexDebug/4/classes.dex
+base.5=/home/blue/Documents/github/MemoryGame/app/build/intermediates/dex/debug/mergeProjectDexDebug/7/classes.dex
 path.0=classes.dex
 path.1=0/classes.dex
 path.2=1/classes.dex
