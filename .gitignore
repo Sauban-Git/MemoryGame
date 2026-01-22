@@ -12,3 +12,4 @@ local.properties
 keystore.properties
 /.kotlin/sessions/kotlin-compiler-*.salive
 .androididle
+**/build/
