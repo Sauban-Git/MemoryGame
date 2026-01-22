@@ -9,7 +9,6 @@ Welcome to the Card Matching Game! This is a fun and engaging game where you fli
 
 <!-- Force One-Line Horizontal Scroll -->
 <div style="display: flex; overflow-x: auto; padding: 10px; gap: 10px;">
-  <img src="assets/images/img1.jpg" alt="img1" style="height: 300px; flex-shrink: 0; min-width: 200px;">
   <img src="assets/images/img2.jpg" alt="img2" style="height: 300px; flex-shrink: 0; min-width: 200px;">
   <img src="assets/images/img3.jpg" alt="img3" style="height: 300px; flex-shrink: 0; min-width: 200px;">
   <img src="assets/images/img4.jpg" alt="img4" style="height: 300px; flex-shrink: 0; min-width: 200px;">
