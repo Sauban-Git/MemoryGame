@@ -5,7 +5,6 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.ViewGroup.MarginLayoutParams
 import android.widget.ImageButton
 import androidx.cardview.widget.CardView
 import androidx.core.content.ContextCompat
@@ -13,7 +12,6 @@ import androidx.core.view.ViewCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.sauban.mymemory.models.BoardSize
 import com.sauban.mymemory.models.MemoryCard
-import kotlin.math.min
 
 class MemoryBoardAdaptor(
     private val context: Context,
@@ -22,15 +20,6 @@ class MemoryBoardAdaptor(
     private val cardClickListener: CardClickListener
 ) :
     RecyclerView.Adapter<MemoryBoardAdaptor.ViewHolder>() {
-
-    private var boardWidth = 0
-    private var boardHeight = 0
-
-    fun setBoardDimensions(width: Int, height: Int) {
-        boardWidth = width
-        boardHeight = height
-        notifyDataSetChanged()
-    }
 
 
     companion object {
@@ -80,7 +69,8 @@ class MemoryBoardAdaptor(
 
         fun bind(position: Int) {
             val memoryCard = cards[position]
-            imageButton.setImageResource(if (memoryCard.isFaceUp) memoryCard.identifier else R.drawable.pattern)
+            imageButton.setImageResource(if (memoryCard.isFaceUp) memoryCard.identifier else R.drawable.animated_emoji_u1f603)
+//            (imageButton.drawable as? Animatable)?.start()
 
 
             imageButton.alpha = if(memoryCard.isMatched) .4f else 1.0f

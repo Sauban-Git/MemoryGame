@@ -18,14 +18,14 @@ android {
     namespace = "com.sauban.mymemory"
     compileSdk = 34
 
-   signingConfigs {
-       create("release") {
-           storeFile = file(keystoreProperties["storeFile"] ?: "")
-           storePassword = keystoreProperties["storePassword"]?.toString() ?: ""
-           keyAlias = keystoreProperties["keyAlias"]?.toString() ?: ""
-           keyPassword = keystoreProperties["keyPassword"]?.toString() ?: ""
-       }
-   }
+    signingConfigs {
+        create("release") {
+            storeFile = file(keystoreProperties["storeFile"] ?: "")
+            storePassword = keystoreProperties["storePassword"]?.toString() ?: ""
+            keyAlias = keystoreProperties["keyAlias"]?.toString() ?: ""
+            keyPassword = keystoreProperties["keyPassword"]?.toString() ?: ""
+        }
+    }
 
     defaultConfig {
         applicationId = "com.sauban.mymemory"
@@ -37,24 +37,24 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
-   buildTypes {
-       release {
-           signingConfig = signingConfigs.getByName("release")
-           isMinifyEnabled = true
-           isShrinkResources = true
-           proguardFiles(
-               getDefaultProguardFile("proguard-android-optimize.txt"),
-               "proguard-rules.pro"
-           )
-       }
-       debug {
-           isMinifyEnabled = false
-           proguardFiles(
-               getDefaultProguardFile("proguard-android-optimize.txt"),
-               "proguard-rules.pro"
-       )
-      }
-   }
+    buildTypes {
+        release {
+            signingConfig = signingConfigs.getByName("release")
+            isMinifyEnabled = true
+            isShrinkResources = true
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro",
+            )
+        }
+        debug {
+            isMinifyEnabled = false
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro",
+            )
+        }
+    }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
